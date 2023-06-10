@@ -19,7 +19,7 @@ def add_data_to_model():
     # Perform your data insertion logic here
     # Example: Adding a new instance to YourModel
     print(CURRENT_POS)
-    text,pos,last_part = extract_audio("whisper/warren-buffet.wav","whisper/output.wav",REFRESH_INTERVAL,CURRENT_POS)
+    text,pos,last_part = extract_audio("whisper/sbf.wav","whisper/output.wav",REFRESH_INTERVAL,CURRENT_POS)
     CURRENT_POS = pos
     if text != False:
         Data.objects.create(value=f"text-{text}",update=False,lastPart=last_part)
