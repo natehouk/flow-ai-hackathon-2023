@@ -1,28 +1,41 @@
 from django.core import serializers
 from django.http import JsonResponse
 from django.views import View
-from .models import Data
+from .models import Data, Summaries
 from django.shortcuts import render
 
-def get(request):
-    latest_data = Data.objects.last()
-    if latest_data is None:
-    	return JsonResponse({'latest_data': False})
-    # call()
-    value = latest_data.value
-    update = latest_data.update
-    # print(f"INFO {value} {update}")
-    if not latest_data.update:
+def get_data(request):
+    data = Data.objects.last()
+    if data is None:
+    	return JsonResponse({'data': False})
+    value = data.value
+    update = data.update
+    if not data.update:
 	    latest_data_to_update = Data.objects.last()
 	    latest_data_to_update.update = True
 	    latest_data_to_update.save()
     if not update:
-        return JsonResponse({'latest_data': latest_data.value})
+        return JsonResponse({'data': data.value})
     else:
-    	return JsonResponse({'latest_data': False})
+    	return JsonResponse({'data': False})
+
+
+def get_summary(request):
+    data = Summaries.objects.last()
+    if data is None:
+    	return JsonResponse({'data': False})
+    value = data.value
+    update = data.update
+    if not data.update:
+	    data_to_update = Summaries.objects.last()
+	    data_to_update.update = True
+	    data_to_update.save()
+    if not update:
+        return JsonResponse({'data': data.value})
+    else:
+    	return JsonResponse({'data': False})
     	
 
-def temp(request):
-
+def index(request):
 	return render(request, 'stream.html')
 

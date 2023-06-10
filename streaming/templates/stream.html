@@ -3,29 +3,69 @@
 <head>
     <title>Data Polling</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        /* Create two equal columns that floats next to each other */
+        .column {
+          float: left;
+          width: 50%;
+          padding: 10px;
+          height: 300px; /* Should be removed. Only for demonstration */
+        }
+        
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+    </style>
     <script>
         $(document).ready(function() {
             function pollData() {
-
                 $.get('/latest-data/', function(data) {
-                    var info = data.latest_data;
-                    console.log(info)
+                    var info = data.data;
                     if (info != false) {
-                        $("#myapp").prepend("<p>" + info + "</p>")
+                        $("#transcript").prepend("<p>" + info + "</p>")
                     }
                     // $('#data').text(data.latest_data);
                     setTimeout(pollData, 1000);  // Poll every 5 seconds
                 });
             }
 
+            function pollSummary() {
+                $.get('/latest-summary/', function(data) {
+                    var info = data.data;
+                    if (info != false) {
+                        $("#summary").prepend("<p>" + info + "</p>")
+                    }
+                    // $('#data').text(data.latest_data);
+                    setTimeout(pollSummary, 1000);  // Poll every 5 seconds
+                });
+            }
+
             pollData();
+            pollSummary();
         });
     </script>
 </head>
 <body>
     <h1>Data Polling</h1>
-    <div  id="myapp">
-        <p>Latest data:</p>
+    <div class="row">
+        <div class="column">
+            <h4> Transcript </h4>
+            <div id="transcript">
+            </div>
+        </div>
+        <div class="column">
+            <h4> GPT Prompts </h4>
+            <div id="summary">
+            </div>
+        </div>
+
     </div>
 </body>
 </html>

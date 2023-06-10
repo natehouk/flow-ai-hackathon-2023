@@ -1,6 +1,6 @@
 import requests
 import wave
-
+    
 def extract_audio(input_path,output_file,nseconds,pos=0):
      with wave.open(input_path, 'rb') as wav_file:
         params = wav_file.getparams()
@@ -21,7 +21,7 @@ def extract_audio(input_path,output_file,nseconds,pos=0):
 
             url = "https://transcribe.whisperapi.com"
             headers = {
-            'Authorization': 'Bearer KFVF9YIDVA8VJNY7HISV3ADWE513SCYB'
+            'Authorization': 'Bearer DV77YHIVLLIR1FY4GNTPRSY67YXUXH4G'
             }
             file = {'file': open(output_file, 'rb')}
 
@@ -33,14 +33,15 @@ def extract_audio(input_path,output_file,nseconds,pos=0):
             }
 
             response = requests.post(url, headers=headers, files=file, data=data)
-            # import time
-            # from datetime import datetime
-            # time.sleep(2)
-            return response.json()["text"], current_pos
-            # return f"text-{datetime.now()}",current_pos
+            import time
+            from datetime import datetime
+            time.sleep(2)
+            # print(response.json())
+            # return response.json()["text"], current_pos
+            return f"text-{datetime.now()}",current_pos
         else:
             # change later
-            return False
+            return False,pos
 
 extract_audio("/Users/sarvesh/Sarvesh/Code/textstreaming/whisper/input-data.wav","/Users/sarvesh/Sarvesh/Code/textstreaming/whisper/output.wav",30)
 
