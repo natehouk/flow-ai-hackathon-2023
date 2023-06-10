@@ -3,9 +3,9 @@
 import requests
 url = "https://transcribe.whisperapi.com"
 headers = {
-'Authorization': '2VS7VHFAP5U558A5PN14VLIABB73S7JT'
+'Authorization': 'Bearer D7RJK6F5HVX5KW8PEYL1FGIPM7UH6LHG'
 }
-file = {'file': open('YOUR_FILE_PATH', 'rb')}
+# file = {'file': open('YOUR_FILE_PATH', 'rb')}
 data = {
   "fileType": "YOUR_FILE_TYPE", #default is wav
   "diarization": "false",
@@ -26,5 +26,5 @@ data = {
   #callbackURL example: https://example.com
   #callbackURL will be called at same time server returns response
 }
-response = requests.post(url, headers=headers, files=file, data=data)
+response = requests.post(url, headers=headers, data=data)
 print(response.text)
