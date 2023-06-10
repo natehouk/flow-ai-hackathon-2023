@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Polling</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            function pollData() {
+
+                $.get('/latest-data/', function(data) {
+                    $('#data').text(data.latest_data);
+                    setTimeout(pollData, 1000);  // Poll every 5 seconds
+                });
+            }
+
+            pollData();
+        });
+    </script>
+</head>
+<body>
+    <h1>Data Polling</h1>
+    <p>Latest data: <span id="data"></span></p>
+</body>
+</html>
