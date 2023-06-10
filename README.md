@@ -24,7 +24,7 @@ Made with ❤️ in Amsterdam by the following team:
 * Sarvesh Mehta
 * Nate Houk
 
-# How to configure
+# How to Configure
 
 Create a file in the root directory called `.env` and replace `<openai-api-key>` with your [OpenAI API key](https://openai.com/blog/openai-api):
 
@@ -32,14 +32,14 @@ Create a file in the root directory called `.env` and replace `<openai-api-key>`
 OPENAI_API_KEY=<openai-api-key>
 ```
 
-# How to run in Docker
+# How to Run in Docker
 
 Run the following command:
 ```
 $ docker-compose up -d
 ``` 
 
-# How to build manually
+# How to Build Manually
 
 Run the following commands:
 ```
@@ -52,14 +52,14 @@ $ pyenv shell 3.8.16
 $ pip install -r requirements.txt
 ```
 
-# How to run locally
+# How to Run Locally
 
 Run the following command:
 ```
 $ python3 manage.py runserver
 ```
 
-# How to use
+# How to Use
 
 Visit [http://127.0.0.1:8000/index](http://127.0.0.1:8000/index)
 
@@ -77,7 +77,7 @@ $ docker-compose exec yass python manage.py add_data_command
 
 Try playing around with different user prompts for filtering and control. Enjoy your summaries.
 
-# System prompt
+# System Prompt
 
 The system prompt is configurable in the `.env` file:
 
