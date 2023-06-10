@@ -8,7 +8,7 @@ headers = {
 # file = {'file': open('YOUR_FILE_PATH', 'rb')}
 data = {
   "fileType": "YOUR_FILE_TYPE", #default is wav
-  "diarization": "false",
+  "diarization": "true",
   #Note: setting this to be true will slow down results.
   #Fewer file types will be accepted when diarization=true
   "numSpeakers": "2",
