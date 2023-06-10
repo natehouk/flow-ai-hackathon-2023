@@ -2,6 +2,7 @@ from datetime import datetime
 import openai
 import os
 from streaming.models import Prompts
+import markdown
 
 # print the chat completion
 def get_prompt(prompt):
@@ -18,6 +19,9 @@ def get_prompt(prompt):
 	    ], 
 	    max_tokens = 100,
 	)
+	result = chat_completion.choices[0].message.content
 	
-	return chat_completion.choices[0].message.content
-	# return prompt
+	# convert markdown to html
+	html = markdown.markdown(result)
+
+	return html

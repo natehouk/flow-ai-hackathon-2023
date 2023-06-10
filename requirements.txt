@@ -3,3 +3,4 @@ Django==4.2.2
 newsapi==0.1.1
 openai==0.27.8
 Requests==2.31.0
+Markdown==3.4.3
