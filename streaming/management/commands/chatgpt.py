@@ -7,7 +7,7 @@ from streaming.models import Prompts
 def get_prompt(prompt):
 	last_object = Prompts.objects.last()
 
-	openai.api_key = os.environ.get("OPENAI_KEY", "sk-")
+	openai.api_key = os.environ.get("OPENAI_API_KEY", "sk-")
 	chat_completion = openai.ChatCompletion.create(
 	    model="gpt-3.5-turbo", messages=[{"role": "user", "content": f"{prompt} \n {last_object.value}"}], max_tokens = 100,
 	)
