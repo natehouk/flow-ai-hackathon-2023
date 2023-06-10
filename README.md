@@ -17,7 +17,7 @@ Output is concise, actionable bytes of information formatted in Markdown which s
 
 # Team Orange
 
-Built with ❤️ in Amsterdam by the following team:
+Made with ❤️ in Amsterdam by the following team:
 
 * Marius Kluonis
 * Ayush Shivani
