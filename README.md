@@ -61,4 +61,9 @@ Run the following command:
 $ python3 manage.py add_data_command
 ```
 
+or if you are using Docker run the following command:
+```
+$ docker-compose exec yass python manage.py add_data_command
+```
+
 Try playing around with different user prompts for filtering and control. Enjoy your summaries.
