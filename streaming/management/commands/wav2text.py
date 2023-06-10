@@ -21,7 +21,7 @@ def extract_audio(input_path,output_file,nseconds,pos=0):
 
             url = "https://transcribe.whisperapi.com"
             headers = {
-            'Authorization': 'Bearer 6I2TB6URGKIDNIU4FLPAZRZABDD1FSB4'
+            'Authorization': 'Bearer 24ISTLYTPQXT3NEAF75H47WLDH4MK92F'
             }
             file = {'file': open(output_file, 'rb')}
 

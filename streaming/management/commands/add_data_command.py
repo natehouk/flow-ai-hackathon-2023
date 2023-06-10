@@ -73,3 +73,4 @@ class Command(BaseCommand):
                 pass
         except KeyboardInterrupt:
             scheduler.shutdown()
+            scheduler2.shutdown()
