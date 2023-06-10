@@ -2,7 +2,6 @@ from datetime import datetime
 import openai
 import os
 from streaming.models import Prompts
-from streaming.config import SYSTEM_PROMPT
 
 # print the chat completion
 def get_prompt(prompt):
