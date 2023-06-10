@@ -7,6 +7,12 @@
 # C extensions
 *.so
 
+# Apple extensions
+*.DS_Store
+
+# Database
+*.sqlite3
+
 # Distribution / packaging
 .Python
 build/
