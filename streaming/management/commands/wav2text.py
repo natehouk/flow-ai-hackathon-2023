@@ -21,7 +21,7 @@ def extract_audio(input_path,output_file,nseconds,pos=0):
 
             url = "https://transcribe.whisperapi.com"
             headers = {
-            'Authorization': 'Bearer DV77YHIVLLIR1FY4GNTPRSY67YXUXH4G'
+            'Authorization': 'Bearer 6I2TB6URGKIDNIU4FLPAZRZABDD1FSB4'
             }
             file = {'file': open(output_file, 'rb')}
 
@@ -33,12 +33,12 @@ def extract_audio(input_path,output_file,nseconds,pos=0):
             }
 
             response = requests.post(url, headers=headers, files=file, data=data)
-            import time
-            from datetime import datetime
-            time.sleep(2)
+            # import time
+            # from datetime import datetime
+            # time.sleep(2)
             # print(response.json())
-            # return response.json()["text"], current_pos
-            return f"text-{datetime.now()}",current_pos
+            return response.json()["text"], current_pos
+            # return f"text-{datetime.now()}",current_pos
         else:
             # change later
             return False,pos

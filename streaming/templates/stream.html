@@ -24,7 +24,23 @@
         }
     </style>
     <script>
+
         $(document).ready(function() {
+            function getCookie(name) {
+              var cookieValue = null;
+              if (document.cookie && document.cookie !== '') {
+                var cookies = document.cookie.split(';');
+                for (var i = 0; i < cookies.length; i++) {
+                  var cookie = cookies[i].trim();
+                  if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                  }
+                }
+              }
+              return cookieValue;
+            }
+
             function pollData() {
                 $.get('/latest-data/', function(data) {
                     var info = data.data;
@@ -47,6 +63,31 @@
                 });
             }
 
+            $("#prompt").click(function() {
+                var postData = {
+                  input: $("#prompt-input").val()
+                }; 
+                var csrfToken = getCookie('csrftoken');
+                $.ajax({
+                  type: "POST",
+                  url: "/post-prompt/",
+                  data: postData,
+                  beforeSend: function(xhr) {
+                    xhr.setRequestHeader("X-CSRFToken", csrfToken);
+                  },
+                  success: function(response) {
+                    console.log(response);
+                    $("#summary").prepend("<p style='color: red;'> Prompt is: " + response.data + "</p>")
+                    // Perform additional actions or logic
+                  },
+                  error: function(xhr, status, error) {
+                    console.log(xhr.responseText);
+                    // Handle error
+                  }
+                });
+
+          });
+
             pollData();
             pollSummary();
         });
@@ -54,6 +95,8 @@
 </head>
 <body>
     <h1>Data Polling</h1>
+    <input type="text" id="prompt-input">
+    <input id="prompt" type="button" value="Submit">
     <div class="row">
         <div class="column">
             <h4> Transcript </h4>
