@@ -1,9 +1,10 @@
 from newsapi import NewsApiClient
 import json
+import os
 
 
 def get_top_headlines_from_newsapi(params=""):
-    newsapi = NewsApiClient(api_key=os.environ.get("NEWSAPI_KEY"))
+    newsapi = NewsApiClient(api_key=os.environ.get("NEWS_API_KEY"))
     top_headlines = newsapi.get_top_headlines(q=params,
                                             category='business',
                                             language='en',

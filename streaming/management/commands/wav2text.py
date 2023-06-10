@@ -1,5 +1,6 @@
 import requests
 import wave
+import os
     
 def extract_audio(input_path,output_file,nseconds,pos=0):
      with wave.open(input_path, 'rb') as wav_file:
@@ -19,9 +20,10 @@ def extract_audio(input_path,output_file,nseconds,pos=0):
                 
                 output_wav.writeframes(frames)
 
+            whisper_api_key = os.environ.get("WHISPER_API_KEY")
             url = "https://transcribe.whisperapi.com"
             headers = {
-            'Authorization': 'Bearer 24ISTLYTPQXT3NEAF75H47WLDH4MK92F'
+            'Authorization': f"Bearer {whisper_api_key}", 
             }
             file = {'file': open(output_file, 'rb')}
 
