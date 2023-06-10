@@ -44,3 +44,5 @@ Visit [http://127.0.0.1:8000/index](http://127.0.0.1:8000/index)
 ```
 $ python3 manage.py add_data_command
 ```
+
+Try playing around with different user prompts for filtering and control. Enjoy your summaries.
