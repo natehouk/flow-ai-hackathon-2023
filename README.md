@@ -31,7 +31,8 @@ NEWS_API_KEY="<news-api-key>"
 OPENAI_API_KEY="<openai-api-key>"
 WHISPER_API_KEY="<whisper-api-key>"
 GPT_MODEL="gpt-3.5-turbo"
-SYSTEM_PROMPT="Follow these rules: \n* Your job is to summarize data inputs into bullet points.
+SYSTEM_PROMPT="Follow these rules:
+* Your job is to summarize data inputs into bullet points.
 * Be concise.
 * Always show most important information as the top bullet point.
 * Emphasize important parts in bold using Markdown.
