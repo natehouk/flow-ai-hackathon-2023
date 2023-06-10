@@ -63,13 +63,14 @@ $ python3 manage.py runserver
 
 Visit [http://127.0.0.1:8000/index](http://127.0.0.1:8000/index)
 
-Run the following command:
+If you are running locally run the following command:
 
 ```
 $ python3 manage.py add_data_command
 ```
 
 or if you are using Docker run the following command:
+
 ```
 $ docker-compose exec yass python manage.py add_data_command
 ```
