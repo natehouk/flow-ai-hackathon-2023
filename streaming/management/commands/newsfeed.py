@@ -1,4 +1,6 @@
 from newsapi import NewsApiClient
+from streaming.management.commands.chatgpt import get_prompt
+
 import json
 import os
 
@@ -27,7 +29,6 @@ def request_headlines(previous_headline):
     new_headline = set()
     current_headline = get_top_headlines_from_newsapi(params="")
     new_headline = current_headline - previous_headline
-    print(new_headline)
-    return new_headline
-
+    print(list(new_headline))
+    return list(new_headline)
 

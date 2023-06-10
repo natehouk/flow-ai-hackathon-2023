@@ -17,7 +17,6 @@ def get_prompt(prompt):
 	    	{"role": "system", "content": system_prompt},
 	    	{"role": "user", "content": f"{prompt} \n {last_object.value}"},
 	    ], 
-	    max_tokens = 100,
 	)
 	result = chat_completion.choices[0].message.content
 	

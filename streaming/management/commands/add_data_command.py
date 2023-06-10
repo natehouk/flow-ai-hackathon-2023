@@ -11,16 +11,17 @@ import math
 CURRENT_POS = 0
 REFRESH_INTERVAL = 15
 SUMMARISE_INTERVAL = 60
-LAST_REFRESH_ID = 0
+LAST_REFRESH_ID = -1
 
 def add_data_to_model():
     global CURRENT_POS
     global REFRESH_INTERVAL
     # Perform your data insertion logic here
     # Example: Adding a new instance to YourModel
-    print(CURRENT_POS)
-    text,pos,last_part = extract_audio("whisper/sbf.wav","whisper/output.wav",REFRESH_INTERVAL,CURRENT_POS)
+    print("DEBIG:",CURRENT_POS)
+    text,pos,last_part = extract_audio("whisper/warren-buffet.wav","whisper/output.wav",REFRESH_INTERVAL,CURRENT_POS)
     CURRENT_POS = pos
+    print(text)
     if text != False:
         Data.objects.create(value=f"text-{text}",update=False,lastPart=last_part)
 
@@ -28,12 +29,13 @@ def chat_gpt_integration():
     global REFRESH_INTERVAL
     global SUMMARISE_INTERVAL
     global LAST_REFRESH_ID
-    summarise_count = math.ceil(SUMMARISE_INTERVAL/REFRESH_INTERVAL)
+    summarise_count = math.ceil(SUMMARISE_INTERVAL/REFRESH_INTERVAL) - 1
 
     last_object = Data.objects.last()
     if last_object is None:
         return
-    if last_object.lastPart is True or last_object.id - LAST_REFRESH_ID >= (summarise_count-1):
+    # print(last_object.id,LAST_REFRESH_ID,summarise_count,"DEBUG")
+    if last_object.lastPart is True or last_object.id - abs(LAST_REFRESH_ID) >= summarise_count:
 
         if last_object.lastPart:
             latest_data_to_update = Data.objects.last()
@@ -41,7 +43,7 @@ def chat_gpt_integration():
             latest_data_to_update.save()
 
 
-        objects = Data.objects.filter(id__gte=LAST_REFRESH_ID, id__lte=last_object.id)
+        objects = Data.objects.filter(id__gt=LAST_REFRESH_ID, id__lte=last_object.id)
         prompt = ""
         for inst_object in objects:
             prompt += f"{inst_object.value} "
@@ -54,23 +56,32 @@ def chat_gpt_integration():
         LAST_REFRESH_ID = last_object.id
 
 
-class Command(BaseCommand):
-    help = 'Runs a function in the background'
+class CustomInstance():
+    def __init__(self,):
+        self.status = False
+        self.firsttime = True
 
-    def handle(self, *args, **options):
-        scheduler = BackgroundScheduler()
-        scheduler.add_job(add_data_to_model,  'interval', seconds=2)  # Adjust the interval as needed
-        scheduler.start()
+    def run(self,):
+        self.scheduler = BackgroundScheduler()
+        self.scheduler.add_job(add_data_to_model,  'interval', seconds=2)  # Adjust the interval as needed
+        self.scheduler.start()
 
-        scheduler2 = BackgroundScheduler()
-        scheduler2.add_job(chat_gpt_integration,  'interval', seconds=2)  # Adjust the interval as needed
-        scheduler2.start()
-
+        self.scheduler2 = BackgroundScheduler()
+        self.scheduler2.add_job(chat_gpt_integration,  'interval', seconds=2)  # Adjust the interval as needed
+        self.scheduler2.start()
+        print("youtube started")
         try:
             # This is needed to keep the main thread alive
             # so the background scheduler can continue running
             while True:
-                pass
+                if self.status:
+                    self.scheduler2.shutdown()
+                    self.scheduler.shutdown()
+                    print("youtube stopped")
+
+                    break
         except KeyboardInterrupt:
-            scheduler.shutdown()
-            scheduler2.shutdown()
+            # scheduler.shutdown()
+            self.scheduler2.shutdown()
+            self.scheduler.shutdown()
+

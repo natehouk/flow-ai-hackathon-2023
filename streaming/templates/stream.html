@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
 <head>
     <title>YASS</title>
@@ -23,79 +24,30 @@
           clear: both;
         }
     </style>
-    <script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="{% static 'script1.js' %}"></script>
+    <script src="{% static 'script2.js' %}"></script>
 
-        $(document).ready(function() {
-            function getCookie(name) {
-              var cookieValue = null;
-              if (document.cookie && document.cookie !== '') {
-                var cookies = document.cookie.split(';');
-                for (var i = 0; i < cookies.length; i++) {
-                  var cookie = cookies[i].trim();
-                  if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                    break;
-                  }
-                }
-              }
-              return cookieValue;
-            }
-
-            function pollData() {
-                $.get('/latest-data/', function(data) {
-                    var info = data.data;
-                    if (info != false) {
-                        $("#transcript").prepend("<p>" + info + "</p>")
-                    }
-                    // $('#data').text(data.latest_data);
-                    setTimeout(pollData, 1000);  // Poll every 5 seconds
-                });
-            }
-
-            function pollSummary() {
-                $.get('/latest-summary/', function(data) {
-                    var info = data.data;
-                    if (info != false) {
-                        $("#summary").prepend("<p>" + info + "</p>")
-                    }
-                    // $('#data').text(data.latest_data);
-                    setTimeout(pollSummary, 1000);  // Poll every 5 seconds
-                });
-            }
-
-            $("#prompt").click(function() {
-                var postData = {
-                  input: $("#prompt-input").val()
-                }; 
-                var csrfToken = getCookie('csrftoken');
-                $.ajax({
-                  type: "POST",
-                  url: "/post-prompt/",
-                  data: postData,
-                  beforeSend: function(xhr) {
-                    xhr.setRequestHeader("X-CSRFToken", csrfToken);
-                  },
-                  success: function(response) {
-                    console.log(response);
-                    $("#summary").prepend("<p style='color: red;'> Prompt is: " + response.data + "</p>")
-                    // Perform additional actions or logic
-                  },
-                  error: function(xhr, status, error) {
-                    console.log(xhr.responseText);
-                    // Handle error
-                  }
-                });
-
-          });
-            pollData();
-            pollSummary();
-        });
-    </script>
 </head>
 <body>
     <h1>YASS</h1>
+    <select id="dataSource">
+      <option value="none">None</option>  
+      <option value="youtube">Youtube Video</option>
+      <option value="news">News Feed</option>
+      <option value="twitter">Twitter Feed</option>
+      <option value="telegram">Telegram</option>
+    </select>
+    <span id="sourceErr"></span>
+    <br><br>
+    <input id="source" type="button" value="Change Source">
+    <input id="sourceStop" type="button" value="Stop Source">
+
+    <br><br>
+    <h4> ChatGPT User Prompt </h4>
     <input type="text" id="prompt-input">
     <input id="prompt" type="button" value="Submit">
+
     <div class="row">
         <div class="column">
             <h4> Transcript </h4>

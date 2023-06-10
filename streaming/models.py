@@ -10,6 +10,19 @@ class Summaries(models.Model):
     value = models.CharField(max_length=255)
     update = models.BooleanField(default=False)
 
+
+class DataAPIs(models.Model):
+    source = models.CharField(max_length=255)
+    description = models.CharField(max_length=255)
+    title = models.CharField(max_length=255)
+    update = models.BooleanField(default=False)
+    lastPart = models.BooleanField(default=False)
+
+class SummariesAPIs(models.Model):
+    value = models.CharField(max_length=255)
+    update = models.BooleanField(default=False)
+
+
 class Prompts(models.Model):
     value = models.CharField(max_length=255)
     update = models.BooleanField(default=False)
@@ -17,4 +30,4 @@ class Prompts(models.Model):
 
 last_object = Prompts.objects.last()
 if last_object is None:
-    Prompts.objects.create(value=f"summarize the incoming data, I would like to know the opinions of main person speaking",update=False)
+    Prompts.objects.create(value=f"Which of the above might impact the financial market and relevant to a trading company?",update=False)
