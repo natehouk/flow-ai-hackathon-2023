@@ -3,7 +3,7 @@ import json
 
 
 def get_top_headlines_from_newsapi(params=""):
-    newsapi = NewsApiClient(api_key='6f0ded9f16ed48eb9044f79da157da97')
+    newsapi = NewsApiClient(api_key=os.environ.get("NEWSAPI_KEY"))
     top_headlines = newsapi.get_top_headlines(q=params,
                                             category='business',
                                             language='en',

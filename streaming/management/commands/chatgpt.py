@@ -9,7 +9,7 @@ def get_prompt(prompt):
 	last_object = Prompts.objects.last()
 
 	# openai.api_key = "sk-"
-	openai.api_key = os.environ.get("OPENAI_API_KEY", "sk-")
+	openai.api_key = os.environ.get("OPENAI_API_KEY")
 	gpt_model = os.environ.get("GPT_MODEL", "gpt-3.5-turbo")
 	system_prompt =  os.environ.get("SYSTEM_PROMPT", "You are a snarky news analyst at Goldman Saches. Your job is to summarize the data inputs you receive. Be concise. Show most important information at the top. Highlight important parts in bold using Markdown. Use bullet points. Display information, in plain facts, and statements.")
 	chat_completion = openai.ChatCompletion.create(
