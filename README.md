@@ -1,6 +1,6 @@
 # flow-ai-hackathon-2023
 
-**YASS (Yet Another Streaming Summarizer)**
+## YASS (Yet Another Streaming Summarizer)
 
 Yet Another Stream Summarizer, or YASS, is a tool to make live streaming summaries of inputs with the help of a Large Language Model (LLM).
 
@@ -15,14 +15,14 @@ The results are then added to a data frame which is appended to the system promp
 
 Output is concise, actionable bytes of information formatted in Markdown which streams to the browser.
 
-**Team Orange**
+# Team Orange
 
 Marius Kluonis
 Ayush Shivani
 Sarvesh Mehta
 Nate Houk
 
-**How to build**
+# How to build
 
 ```
 $ mkdir -p /opt/src
@@ -33,7 +33,7 @@ $ pyenv shell 3.8.16
 $ pip install -r requirements.txt
 ```
 
-**How to run**
+# How to run
 
 ```
 $ python3 manage.py runserver
