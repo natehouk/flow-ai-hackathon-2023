@@ -1,6 +1,7 @@
 # flow-ai-hackathon-2023
 
 **YASS (Yet Another Streaming Summarizer)**
+
 Yet Another Stream Summarizer, or YASS, is a tool to make live streaming summaries of inputs with the help of a GPT LLM.
 
 Possible inputs include:
@@ -11,12 +12,14 @@ Possible inputs include:
 * NewsAPI news stories
 
 **Team Orange**
+
 Marius Kluonis
 Ayush Shivani
 Sarvesh Mehta
 Nate Houk
 
 **How to build**
+
 ```
 $ mkdir -p /opt/src
 $ cdd /opt/src
@@ -27,6 +30,7 @@ $ pip install -r requirements.txt
 ```
 
 **How to run**
+
 ```
 $ python3 manage.py runserver
 ```
