@@ -8,7 +8,12 @@
             function pollData() {
 
                 $.get('/latest-data/', function(data) {
-                    $('#data').text(data.latest_data);
+                    var info = data.latest_data;
+                    console.log(info)
+                    if (info != false) {
+                        $("#myapp").prepend("<p>" + info + "</p>")
+                    }
+                    // $('#data').text(data.latest_data);
                     setTimeout(pollData, 1000);  // Poll every 5 seconds
                 });
             }
@@ -19,6 +24,8 @@
 </head>
 <body>
     <h1>Data Polling</h1>
-    <p>Latest data: <span id="data"></span></p>
+    <div  id="myapp">
+        <p>Latest data:</p>
+    </div>
 </body>
 </html>
