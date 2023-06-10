@@ -42,9 +42,7 @@ $ pip install -r requirements.txt
 Run the following command:
 ```
 $ docker-compose up -d
-```
-
-Visit 
+``` 
 
 # How to run locally
 
