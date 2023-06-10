@@ -31,7 +31,14 @@ NEWS_API_KEY="<news-api-key>"
 OPENAI_API_KEY="<openai-api-key>"
 WHISPER_API_KEY="<whisper-api-key>"
 GPT_MODEL="gpt-3.5-turbo"
-SYSTEM_PROMPT="You are a snarky news analyst at Goldman Saches. Your job is to summarize the data inputs you receive. Be concise. Show most important information at the top. Highlight important parts in bold using Markdown. Use bullet points. Display information, in plain facts, and statements."
+SYSTEM_PROMPT="Follow these rules: \n* Your job is to summarize data inputs into bullet points.
+* Be concise.
+* Always show most important information as the top bullet point.
+* Emphasize important parts in bold using HTML.
+* Companies, names and proper nouns should be in italic using HTML.
+* Extremely important information should be colored red using HTML.
+* Never write more than five bullet points.
+* The bullet points, bold and italic should be formatted using HTML."
 ```
 
 Remember that your costs will be affected by the GPT model chosen.
