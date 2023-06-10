@@ -24,19 +24,6 @@ Made with ❤️ in Amsterdam by the following team:
 * Sarvesh Mehta
 * Nate Houk
 
-# How to build
-
-Run the following commands:
-```
-$ mkdir -p /opt/src
-$ cd /opt/src
-$ git clone git@github.com:natehouk/flow-ai-hackathon-2023.git
-$ cd flow-ai-hackathon-2023
-$ pyenv install 3.8.16
-$ pyenv shell 3.8.16
-$ pip install -r requirements.txt
-```
-
 # How to configure
 
 Create a file in the root directory called `.env` and replace `<openai-api-key>` with your [OpenAI API key](https://openai.com/blog/openai-api):
@@ -51,6 +38,19 @@ Run the following command:
 ```
 $ docker-compose up -d
 ``` 
+
+# How to build manually
+
+Run the following commands:
+```
+$ mkdir -p /opt/src
+$ cd /opt/src
+$ git clone git@github.com:natehouk/flow-ai-hackathon-2023.git
+$ cd flow-ai-hackathon-2023
+$ pyenv install 3.8.16
+$ pyenv shell 3.8.16
+$ pip install -r requirements.txt
+```
 
 # How to run locally
 
@@ -79,6 +79,6 @@ Try playing around with different user prompts for filtering and control. Enjoy 
 
 # System prompt
 
-The system prompt is configurable in the file `system-prompt.txt`:
+The system prompt is configurable in the `.env` file:
 
-> You are a snarky news analyst at Goldman Saches. Your job is to summarize the data inputs you receive. Be concise. Show most important information at the top. Highlight important parts in bold using Markdown. Use bullet points. Display information, in plain facts, and statements.
+> SYSTEM_PROMPT="You are a snarky news analyst at Goldman Saches. Your job is to summarize the data inputs you receive. Be concise. Show most important information at the top. Highlight important parts in bold using Markdown. Use bullet points. Display information, in plain facts, and statements."
