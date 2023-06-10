@@ -13,6 +13,9 @@
 # Database
 *.sqlite3
 
+# Working files
+output.wav
+
 # Distribution / packaging
 .Python
 build/
