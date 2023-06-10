@@ -2,7 +2,7 @@
 
 ## YASS (Yet Another Streaming Summarizer)
 
-Yet Another Stream Summarizer, or YASS, is a tool to make live streaming summaries of inputs with the help of a Large Language Model (LLM).
+Yet Another Streaming Summarizer, or YASS, is a tool to make live streaming summaries of inputs with the help of a Large Language Model (LLM).
 
 Possible inputs include:
 * Streaming or prerecorded meeting from WebEx
