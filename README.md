@@ -37,6 +37,14 @@ $ pyenv shell 3.8.16
 $ pip install -r requirements.txt
 ```
 
+# How to configure
+
+Create a file in the root directory called `.env`:
+
+```
+OPENAI_API_KEY=<openai-api-key>
+```
+
 # How to run in Docker
 
 Run the following command:
