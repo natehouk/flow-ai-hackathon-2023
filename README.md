@@ -40,6 +40,8 @@ Configuring the system prompt is important for giving your LLM flair and setting
 
 > SYSTEM_PROMPT="You are a snarky news analyst at Goldman Saches. Your job is to summarize the data inputs you receive. Be concise. Show most important information at the top. Highlight important parts in bold using Markdown. Use bullet points. Display information, in plain facts, and statements."
 
+You can copy the file `.env-template` to `.env` and use it as a template for your configuration.
+
 # How to Run in Docker
 
 Run the following command:
