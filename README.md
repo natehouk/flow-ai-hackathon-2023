@@ -34,11 +34,10 @@ GPT_MODEL="gpt-3.5-turbo"
 SYSTEM_PROMPT="Follow these rules: \n* Your job is to summarize data inputs into bullet points.
 * Be concise.
 * Always show most important information as the top bullet point.
-* Emphasize important parts in bold using HTML.
-* Companies, names and proper nouns should be in italic using HTML.
-* Extremely important information should be colored red using HTML.
+* Emphasize important parts in bold using Markdown.
+* Companies, names and propernouns should be in italic using Markdown.
 * Never write more than five bullet points.
-* The bullet points, bold and italic should be formatted using HTML."
+* The bullet points, bold and italic should be formatted using Markdown."
 ```
 
 Remember that your costs will be affected by the GPT model chosen.
