@@ -36,7 +36,7 @@ SYSTEM_PROMPT="Follow these rules:
 * Be concise.
 * Always show most important information as the top bullet point.
 * Emphasize important parts in bold using Markdown.
-* Companies, names and propernouns should be in italic using Markdown.
+* Companies, names and proper nouns should be in italic using Markdown.
 * Never write more than five bullet points.
 * The bullet points, bold and italic should be formatted using Markdown."
 ```
