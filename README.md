@@ -17,6 +17,8 @@ Output is concise, actionable bytes of information formatted in Markdown which s
 
 # Team Orange
 
+Built with ❤️ in Amsterdam by the following team:
+
 * Marius Kluonis
 * Ayush Shivani
 * Sarvesh Mehta
@@ -24,6 +26,7 @@ Output is concise, actionable bytes of information formatted in Markdown which s
 
 # How to build
 
+Run the following commands:
 ```
 $ mkdir -p /opt/src
 $ cd /opt/src
@@ -34,13 +37,27 @@ $ pyenv shell 3.8.16
 $ pip install -r requirements.txt
 ```
 
-# How to run
+# How to run in Docker
 
+Run the following command:
+```
+$ docker-compose up -d
+```
+
+Visit 
+
+# How to run locally
+
+Run the following command:
 ```
 $ python3 manage.py runserver
 ```
 
+# How to use
+
 Visit [http://127.0.0.1:8000/index](http://127.0.0.1:8000/index)
+
+Run the following command:
 
 ```
 $ python3 manage.py add_data_command
