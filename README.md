@@ -17,10 +17,10 @@ Output is concise, actionable bytes of information formatted in Markdown which s
 
 # Team Orange
 
-Marius Kluonis
-Ayush Shivani
-Sarvesh Mehta
-Nate Houk
+* Marius Kluonis
+* Ayush Shivani
+* Sarvesh Mehta
+* Nate Houk
 
 # How to build
 
