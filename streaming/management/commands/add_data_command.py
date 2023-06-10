@@ -9,8 +9,8 @@ from streaming.management.commands.chatgpt import get_prompt
 import math
 
 CURRENT_POS = 0
-REFRESH_INTERVAL = 30
-SUMMARISE_INTERVAL = 120
+REFRESH_INTERVAL = 15
+SUMMARISE_INTERVAL = 60
 LAST_REFRESH_ID = 0
 
 def add_data_to_model():
@@ -19,10 +19,10 @@ def add_data_to_model():
     # Perform your data insertion logic here
     # Example: Adding a new instance to YourModel
     print(CURRENT_POS)
-    text,pos = extract_audio("whisper/input-data.wav","whisper/output.wav",REFRESH_INTERVAL,CURRENT_POS)
+    text,pos,last_part = extract_audio("whisper/warren-buffet.wav","whisper/output.wav",REFRESH_INTERVAL,CURRENT_POS)
     CURRENT_POS = pos
     if text != False:
-        Data.objects.create(value=f"text-{text}",update=False)
+        Data.objects.create(value=f"text-{text}",update=False,lastPart=last_part)
 
 def chat_gpt_integration():
     global REFRESH_INTERVAL
@@ -33,7 +33,14 @@ def chat_gpt_integration():
     last_object = Data.objects.last()
     if last_object is None:
         return
-    if last_object.id - LAST_REFRESH_ID >= (summarise_count-1):
+    if last_object.lastPart is True or last_object.id - LAST_REFRESH_ID >= (summarise_count-1):
+
+        if last_object.lastPart:
+            latest_data_to_update = Data.objects.last()
+            latest_data_to_update.lastPart = False
+            latest_data_to_update.save()
+
+
         objects = Data.objects.filter(id__gte=LAST_REFRESH_ID, id__lte=last_object.id)
         prompt = ""
         for inst_object in objects:

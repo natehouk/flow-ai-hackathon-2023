@@ -33,15 +33,17 @@ def extract_audio(input_path,output_file,nseconds,pos=0):
             }
 
             response = requests.post(url, headers=headers, files=file, data=data)
-            # import time
-            # from datetime import datetime
-            # time.sleep(2)
+            import time
+            from datetime import datetime
             # print(response.json())
-            return response.json()["text"], current_pos
-            # return f"text-{datetime.now()}",current_pos
+            if current_pos >= total_frames:
+                # return f"text-{datetime.now()}",current_pos, True
+                return response.json()["text"], current_pos, True    
+            return response.json()["text"], current_pos, False
+            # return f"text-{datetime.now()}",current_pos, False
         else:
             # change later
-            return False,pos
+            return False,pos, False
 
 #extract_audio("/Users/sarvesh/Sarvesh/Code/textstreaming/whisper/input-data.wav","/Users/sarvesh/Sarvesh/Code/textstreaming/whisper/output.wav",30)
 
