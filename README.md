@@ -36,6 +36,10 @@ SYSTEM_PROMPT="You are a snarky news analyst at Goldman Saches. Your job is to s
 
 Remember that your costs will be affected by the GPT model chosen.
 
+Configuring the system prompt is important for giving your LLM flair and setting up the constraints of the inference:
+
+> SYSTEM_PROMPT="You are a snarky news analyst at Goldman Saches. Your job is to summarize the data inputs you receive. Be concise. Show most important information at the top. Highlight important parts in bold using Markdown. Use bullet points. Display information, in plain facts, and statements."
+
 # How to Run in Docker
 
 Run the following command:
@@ -83,6 +87,4 @@ Try playing around with different user prompts for filtering and control. Enjoy 
 
 # System Prompt
 
-The system prompt is configurable in the `.env` file:
 
-> SYSTEM_PROMPT="You are a snarky news analyst at Goldman Saches. Your job is to summarize the data inputs you receive. Be concise. Show most important information at the top. Highlight important parts in bold using Markdown. Use bullet points. Display information, in plain facts, and statements."
