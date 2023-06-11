@@ -5,11 +5,15 @@
 Yet Another Streaming Summarizer, or YASS, is a tool to make live streaming summaries of inputs with the help of a Large Language Model (LLM).
 
 Possible inputs include:
-* Streaming or prerecorded meeting from WebEx
-* Streaming chats from WebEx
-* Streaming video news from YouTube
-* Prerecorded video from YouTube
-* NewsAPI news stories
+* Live Television News
+* Live Radio News
+* Live WebEx Meeting
+* WebEx Meeting
+* YouTube Video
+* News Articles
+* Market Data
+* Twitter
+* Telegram
 
 The results are then added to a data frame which is appended to the system prompt. Finally, a user prompt is appended which allows for interactive filtering and control.
 
