@@ -4,3 +4,4 @@ Markdown==3.4.3
 newsapi_python==0.2.7
 openai==0.27.8
 Requests==2.31.0
+youtube_dl==2021.12.17

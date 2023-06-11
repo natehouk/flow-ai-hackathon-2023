@@ -36,36 +36,39 @@
 <body>
     <h1>YASS</h1>
     <select id="dataSource">
-      <option value="none">None</option>  
-      <option value="youtube">Youtube Video</option>
-      <option value="news">News Feed</option>
-      <option value="market">Market Aux Feed</option>
-      <option value="twitter">Twitter Feed</option>
+      <option value="none">None</option>
+      <option value="television">Live Television News</option>
+      <option value="radio">Live Radio News</option>
+      <option value="live-webex">Live WebEx Meeting</option>
+      <option value="webex">WebEx Meeting</option>
+      <option value="youtube">YouTube Video</option>
+      <option value="news">News Articles</option>
+      <option value="market">Market Data</option>
+      <option value="twitter">Twitter</option>
       <option value="telegram">Telegram</option>
     </select>
     <span id="sourceErr"></span>
     <br><br>
     <input id="source" type="button" value="Change Source">
     <input id="sourceStop" type="button" value="Stop Source">
-    <input id="youtube-url" type="text" placeholder="Youtube URL" disabled>
+    <input id="youtube-url" type="text" placeholder="YouTube URL" disabled>
 
     <br><br>
-    <h4> ChatGPT User Prompt </h4>
+    <h4>User Prompt:</h4>
     <input type="text" id="prompt-input">
     <input id="prompt" type="button" value="Submit">
 
     <div class="row">
         <div class="column">
-            <h4>Transcript</h4>
-            <div id="transcript">
-            </div>
-        </div>
-        <div class="column">
             <h4>Generative AI</h4>
             <div id="summary">
             </div>
         </div>
-
+        <div class="column" style="color: #D3D3D3">
+          <h4>Transcript</h4>
+          <div id="transcript">
+          </div>
+      </div>
     </div>
 </body>
 </html>
