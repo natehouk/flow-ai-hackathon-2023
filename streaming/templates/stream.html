@@ -2,7 +2,12 @@
 {% load static %}
 <html>
 <head>
-    <title>YASS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YASS.ai</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         body {
@@ -19,6 +24,7 @@
           width: 50%;
           padding: 10px;
           height: 300px; /* Should be removed. Only for demonstration */
+          overflow-y: scroll;
         }
         
         /* Clear floats after the columns */
@@ -34,40 +40,95 @@
 
 </head>
 <body>
-    <h1>YASS</h1>
-    <select id="dataSource">
-      <option value="none">None</option>
-      <option value="television">Live Television News</option>
-      <option value="radio">Live Radio News</option>
-      <option value="live-webex">Live WebEx Meeting</option>
-      <option value="webex">WebEx Meeting</option>
-      <option value="youtube">YouTube Video</option>
-      <option value="news">News Articles</option>
-      <option value="market">Market Data</option>
-      <option value="twitter">Twitter</option>
-      <option value="telegram">Telegram</option>
-    </select>
-    <span id="sourceErr"></span>
-    <br><br>
-    <input id="source" type="button" value="Change Source">
-    <input id="sourceStop" type="button" value="Stop Source">
-    <input id="youtube-url" type="text" placeholder="YouTube URL" disabled>
-
-    <br><br>
-    <h4>User Prompt:</h4>
-    <input type="text" id="prompt-input">
-    <input id="prompt" type="button" value="Submit">
-
-    <div class="row">
-        <div class="column">
-            <h4>Generative AI</h4>
-            <div id="summary">
+  <div class="m-6">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">
+              <h2><b>YASS.ai</b></h2>
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <a href="#" class="nav-item nav-link active">Home</a>
+                    <a href="#" class="nav-item nav-link active">Pricing</a>
+                </div>
             </div>
         </div>
-        <div class="column" style="color: #D3D3D3">
-          <h4>Transcript</h4>
-          <div id="transcript">
+    </nav>
+  </div>
+  <div class="container-fluid">
+    <div class="p-5 my-4 bg-light rounded-3">
+        <h1>Yet Another Streaming Summarizer(YASS)💡</h1>
+        <p class="lead">Yet Another Streaming Summarizer or YASS, is a tool harnessing the power of ChatGpt to summarize all kinds of data from various sources including videos,audios, news stream. It has the flexibility with not just the input source but also gives the user the power to summarize the stream as per his needs by entering the prompts. </p>
+    </div>
+  </div>
+  <div class="m-4">
+    <h3>Lets get our hand dirty!🤹‍♀️</h3>
+  </div>
+  <div class="m-4"> 
+    <div class="row mb-3 bg-light"><h3>Select your Source 🔍</h3></div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label"><b>Select Source</b></label>
+        <div class="col-sm-6">
+          <select id="dataSource">
+            <option value="none">None</option>
+            <option value="television">Live Television News</option>
+            <option value="radio">Live Radio News</option>
+            <option value="live-webex">Live WebEx Meeting</option>
+            <option value="webex">WebEx Meeting</option>
+            <option value="youtube">YouTube Video</option>
+            <option value="news">News Articles</option>
+            <option value="market">Market Data</option>
+            <option value="twitter">Twitter</option>
+            <option value="telegram">Telegram</option>
+          </select>
+          <span id="sourceErr"></span>
+        </div>
+        </div>
+        <div class="row mb-3">
+          <label class="col-sm-3 col-form-label"><b>Youtube Link</b></label>
+          <div class="col-sm-8">
+            <input id="youtube-url" type="text" placeholder="YouTube URL" disabled>
           </div>
+        </div>
+        <div class="row mb-3">
+          <button id="source" type="button" class="btn btn-outline-success btn-rounded col-sm-3">Change Source</button>
+          <button id="sourceStop" type="button" class="btn btn-outline-danger btn-rounded col-sm-3">Stop Source</button>
+        <div>
+      </div>
+    </div>
+    </div>
+    </div>
+    <!-- <input id="source" type="button" value="Change Source">
+    <input id="sourceStop" type="button" value="Stop Source"> -->
+    <!-- <input id="youtube-url" type="text" placeholder="YouTube URL" disabled> -->
+    <div class="m-4">
+      <div class="row mb-3 bg-light"><h3>Configure Your Prompt 🛠️</h3></div>
+      <!-- <input type="text" id="prompt-input">
+      <input id="prompt" type="button" value="Submit">   -->
+      <div class="row mb-3">
+        <label class="col-sm-3 col-form-label"><b>Tell us your prompt</b></label>
+        <div class="col-sm-8">
+          <input id="prompt-input" type="text" placeholder="Configure your prompt" class="col-sm-4">
+          <input id="prompt" type="button" class="btn btn-outline-success btn-rounded col-sm-4" value="Submit">  
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="m-4"> 
+      <div class="row mb-3 bg-light"><h3>Here you go! 🚀🚀</h3></div>
+      <div class="row mb-3">
+        <div class="col-md-6 column">
+          <h4>Generative AI</h4>
+          <div id="summary">
+          </div>
+        </div>
+      <div class="col-md-6 column" style="color: #D3D3D3">
+        <h4>Transcript</h4>
+        <div id="transcript">
+        </div>
       </div>
     </div>
 </body>
