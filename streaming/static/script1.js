@@ -49,13 +49,13 @@
           var postData = {
             input: $("#prompt-input").val()
           }; 
-          var csrfToken = getCookie('csrftoken');
+          // var csrfToken = getCookie('csrftoken');
           $.ajax({
             type: "POST",
             url: "/post-prompt/",
             data: postData,
             beforeSend: function(xhr) {
-              xhr.setRequestHeader("X-CSRFToken", csrfToken);
+              // xhr.setRequestHeader("X-CSRFToken", csrfToken);
             },
             success: function(response) {
               console.log(response);

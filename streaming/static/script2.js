@@ -44,7 +44,7 @@
          if(currentSource!=null){
             // kill source
          }
-         var csrfToken = getCookie('csrftoken');
+         // var csrfToken = getCookie('csrftoken');
          var postData = {
             "source": source
           }; 
@@ -66,7 +66,7 @@
             url: "/add-source/",
             data: postData,
             beforeSend: function(xhr) {
-              xhr.setRequestHeader("X-CSRFToken", csrfToken);
+              // xhr.setRequestHeader("X-CSRFToken", csrfToken);
             },
             success: function(response) {
               console.log(response);
@@ -82,7 +82,7 @@
          if(currentSource!=null){
             // kill source
 
-            var csrfToken = getCookie('csrftoken');
+            // var csrfToken = getCookie('csrftoken');
             var postData = {
                "source": currentSource
              }; 
@@ -91,7 +91,7 @@
                url: "/kill-source/",
                data: postData,
                beforeSend: function(xhr) {
-                 xhr.setRequestHeader("X-CSRFToken", csrfToken);
+                 // xhr.setRequestHeader("X-CSRFToken", csrfToken);
                },
                success: function(response) {
                  $("#transcript").prepend("<p style='color: red;'> Source Stopped </p>")
