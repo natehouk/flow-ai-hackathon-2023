@@ -76,6 +76,13 @@ Made with ❤️ in Amsterdam by the following team:
 
 Visit [http://yass.work/](http://yass.work/)
 
+**Example Videos**
+[https://www.youtube.com/watch?v=UYrm0DZGhaQ](https://www.youtube.com/watch?v=UYrm0DZGhaQ)
+[https://www.youtube.com/watch?v=01xYpDhYwGg](https://www.youtube.com/watch?v=01xYpDhYwGg)
+[https://www.youtube.com/watch?v=9eTzV7HvKHU](https://www.youtube.com/watch?v=9eTzV7HvKHU)
+[https://www.youtube.com/watch?v=L4BqP8qM9yA](https://www.youtube.com/watch?v=L4BqP8qM9yA)
+[https://www.youtube.com/watch?v=IyoGdwVIwWw](https://www.youtube.com/watch?v=IyoGdwVIwWw)
+
 # How to Configure
 Create a file in the root directory called `.env` and replace `<openai-api-key>` with your [OpenAI API key](https://openai.com/blog/openai-api), [NewsAPI key](https://newsapi.org), [Whisper API Key](https://whisperapi.com), choose an OpenAI GPT model ("gpt-4", "gpt-3.5-turbo", etc) and set the system prompt:
 ```
