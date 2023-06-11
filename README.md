@@ -139,3 +139,7 @@ $ docker-compose exec yass python manage.py add_data_command
 ```
 
 Try playing around with different user prompts for filtering and control. Enjoy your summaries.
+
+# License
+
+Apache 2.0
