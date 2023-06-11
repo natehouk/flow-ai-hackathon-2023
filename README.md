@@ -26,6 +26,7 @@ Output is concise, actionable bytes of information formatted in Markdown which s
 
 # Data Flow
 
+```
 ┌─────────────────────┐
 │                     │
 │ ┌─────────────┐     │  ┌────────────┐      ┌────────────────────────────────┐
@@ -60,6 +61,7 @@ Output is concise, actionable bytes of information formatted in Markdown which s
                                                                       │                              │
                                                                       └──────────────────────────────┘
 
+```
 
 # Team Orange
 
