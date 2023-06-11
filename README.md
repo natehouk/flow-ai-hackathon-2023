@@ -31,20 +31,14 @@ NEWS_API_KEY="<news-api-key>"
 OPENAI_API_KEY="<openai-api-key>"
 WHISPER_API_KEY="<whisper-api-key>"
 GPT_MODEL="gpt-4"
-SYSTEM_PROMPT="Follow these rules:\n* Your job is to summarize data inputs into bullet points.\n* Be concise.\n* Always show most important information as the top bullet point.\n* Emphasize important parts in bold using Markdown.\n* Companies, names and proper nouns should be in italic using Markdown.\n* Never write more than five bullet points.\n* The bullet points, bold and italic should be formatted using Markdown."
+SYSTEM_PROMPT="Follow these rules: 1) Your job is to summarize data inputs into bullet points. 2) Be concise. 3) Always show most important information as the top bullet point. 4) Emphasize important parts in bold using Markdown. 5) Companies, names and proper nouns should be in italic using Markdown. 6) Never write more than five bullet points. 7) The bullet points, bold and italic should be formatted using Markdown."
 ```
 
 Remember that your costs will be affected by the GPT model chosen.
 
-Configuring the system prompt is important for giving your LLM flair and setting up the constraints of the inference. The default system prompt is:
+Configuring the system prompt is important for giving your LLM flair and setting up the constraints of the inference:
 
-> Follow these rules:
-> * Your job is to summarize data inputs into bullet points.
-> * Be concise.\n* Always show most important information as the top bullet point.
-> * Emphasize important parts in bold using Markdown.
-> * Companies, names and proper nouns should be in italic using Markdown.
-> * Never write more than five bullet points.
-> * The bullet points, bold and italic should be formatted using Markdown.
+> SYSTEM_PROMPT="Follow these rules: 1) Your job is to summarize data inputs into bullet points. 2) Be concise. 3) Always show most important information as the top bullet point. 4) Emphasize important parts in bold using Markdown. 5) Companies, names and proper nouns should be in italic using Markdown. 6) Never write more than five bullet points. 7) The bullet points, bold and italic should be formatted using Markdown."
 
 You can copy the file `.env-template` to `.env` and use it as a template for your configuration.
 
@@ -63,8 +57,8 @@ $ mkdir -p /opt/src
 $ cd /opt/src
 $ git clone git@github.com:natehouk/flow-ai-hackathon-2023.git
 $ cd flow-ai-hackathon-2023
-$ pyenv install 3.11.1
-$ pyenv shell 3.11.1
+$ pyenv install 3.8.16
+$ pyenv shell 3.8.16
 $ pip install -r requirements.txt
 ```
 
