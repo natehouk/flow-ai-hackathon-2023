@@ -14,6 +14,7 @@ Possible inputs include:
 * Market Data
 * Twitter
 * Telegram
+* and more with the Custom Plugin SDK!
 
 The results are then added to a data frame which is appended to the system prompt. Finally, a user prompt is appended which allows for interactive filtering and control.
 
