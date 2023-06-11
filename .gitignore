@@ -11,7 +11,7 @@
 *.DS_Store
 
 # Database
-*.sqlite3
+#*.sqlite3
 
 # Working files
 output.wav
