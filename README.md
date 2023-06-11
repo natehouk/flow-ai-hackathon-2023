@@ -78,7 +78,7 @@ $ python3 manage.py runserver
 
 # How to Use
 
-Visit [http://127.0.0.1:8000/index](http://127.0.0.1:8000/index)
+Visit [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
 If you are running locally run the following command:
 
