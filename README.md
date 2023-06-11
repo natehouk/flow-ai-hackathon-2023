@@ -82,6 +82,7 @@ Visit [http://yass.work/](http://yass.work/)
 * [https://www.youtube.com/watch?v=9eTzV7HvKHU](https://www.youtube.com/watch?v=9eTzV7HvKHU)
 * [https://www.youtube.com/watch?v=L4BqP8qM9yA](https://www.youtube.com/watch?v=L4BqP8qM9yA)
 * [https://www.youtube.com/watch?v=IyoGdwVIwWw](https://www.youtube.com/watch?v=IyoGdwVIwWw)
+* [https://www.youtube.com/watch?v=02ut26-HFGg](https://www.youtube.com/watch?v=02ut26-HFGg)
 
 **Example User Prompts**
 * Display all output as HTML with CSS styling.  Do not include any other text, other than HTML/CSS, start directly with first HTML tag. Output should look as a bullet point list. Please pick cryptocurrency trading and cryptocurrency market related words and make sure they are displayed in red color.  Also if it is Tesla related - add a hyperlink to google search regarding the specific topic. Each bullet point should be 7 words long.
