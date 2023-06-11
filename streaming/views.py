@@ -3,10 +3,10 @@ from django.http import JsonResponse
 from django.views import View
 from .models import *
 from django.shortcuts import render
-from streaming.management.commands.add_data_command import CustomInstance
+from streaming.management.commands.add_data_command import Command
 from streaming.management.commands.apis import CustomInstanceAPIs
 
-transcribe_instance = CustomInstance()
+transcribe_instance = Command()
 api_instance = CustomInstanceAPIs(None)
 def get_data(request):
     data = Data.objects.last()

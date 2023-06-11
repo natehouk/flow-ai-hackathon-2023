@@ -8,7 +8,6 @@ import markdown
 def get_prompt(prompt):
 	last_object = Prompts.objects.last()
 
-	# openai.api_key = "sk-"
 	openai.api_key = os.environ.get("OPENAI_API_KEY")
 	gpt_model = os.environ.get("GPT_MODEL", "gpt-3.5-turbo")
 	system_prompt =  os.environ.get("SYSTEM_PROMPT")

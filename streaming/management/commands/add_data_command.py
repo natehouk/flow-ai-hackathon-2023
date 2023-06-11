@@ -56,12 +56,12 @@ def chat_gpt_integration():
         LAST_REFRESH_ID = last_object.id
 
 
-class CustomInstance():
+class Command(BaseCommand):
     def __init__(self,):
         self.status = False
         self.firsttime = True
 
-    def run(self,):
+    def handle(self, *args, **options):
         self.scheduler = BackgroundScheduler()
         self.scheduler.add_job(add_data_to_model,  'interval', seconds=2)  # Adjust the interval as needed
         self.scheduler.start()
