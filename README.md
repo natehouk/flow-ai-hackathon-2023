@@ -30,7 +30,7 @@ Create a file in the root directory called `.env` and replace `<openai-api-key>`
 NEWS_API_KEY="<news-api-key>"
 OPENAI_API_KEY="<openai-api-key>"
 WHISPER_API_KEY="<whisper-api-key>"
-GPT_MODEL="gpt-3.5-turbo"
+GPT_MODEL="gpt-4"
 SYSTEM_PROMPT="Follow these rules:
 * Your job is to summarize data inputs into bullet points.
 * Be concise.
