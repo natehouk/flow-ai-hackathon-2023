@@ -2,7 +2,11 @@
 
 ## YASS (Yet Another Streaming Summarizer)
 
-Yet Another Streaming Summarizer, or YASS, is a tool to make live streaming summaries of inputs with the help of a Large Language Model (LLM).
+Introducing YASS, the ultimate data-summarizing marvel! ✨ Powered by ChatGPT, YASS transforms videos, audios, and news streams into concise insights. 🎥🎧📰 This cutting-edge tool goes beyond mere input flexibility, empowering users to customize summaries based on their unique requirements using prompts. 💪 Say goodbye to information overload and hello to streamlined knowledge extraction with YASS.
+
+Whether you're seeking key takeaways from a video, unraveling audio mysteries, or staying up-to-date with news, YASS has you covered. 📺🔍📡 Its coolness lies in the seamless integration of diverse data sources, ensuring no information escapes your grasp. 🌐 With YASS, you're in control, shaping summaries to suit your needs.
+
+Embrace the power of YASS, the future of data summarization. Stay ahead of the curve, save time, and make informed decisions effortlessly. ⏱️💡 Unlock the coolness factor today with YASS, your all-in-one streaming summarizer! 🚀🔓
 
 Possible inputs include:
 * Live Television News
@@ -19,6 +23,43 @@ Possible inputs include:
 The results are then added to a data frame which is appended to the system prompt. Finally, a user prompt is appended which allows for interactive filtering and control.
 
 Output is concise, actionable bytes of information formatted in Markdown which streams to the browser.
+
+# Data Flow
+
+┌─────────────────────┐
+│                     │
+│ ┌─────────────┐     │  ┌────────────┐      ┌────────────────────────────────┐
+│ │Youtube URL  ├─────┼──┤audio strip ├─────►│                                │
+│ └─────────────┘     │  └────────────┘      │                                │
+│                     │                      │ extract text with Whisperer API│
+│ ┌─────────────────┐ │                      │                                │
+│ │Audio files .wav ├─┼─────────────────────►│                                │
+│ └─────────────────┘ │                      └──────────────┬─────────────────┘
+│                     │                                     │
+│ ┌─────────┐         │                                     ▼                       Website GUI
+│ │Twitter  ├─────────┼─────────────────►┌─────────────────────────┐  ┌──────────────────────────────┐
+│ └─────────┘         │                  │                         │  │                              │
+│                     │                  │                         │  │ ┌─────────────────────────┐  │
+│ ┌────────┐          │                  │ Text handling service   ├──┤►│Raw collected data output│  │
+│ │NewsAPI ├──────────┼─────────────────►│                         │  │ └─────────────────────────┘  │
+│ └────────┘          │                  │                         │  │                              │
+│                     │                  └─────────────┬───────────┘  │                              │
+│ ┌──────────┐        │                    ▲           │              │                              │
+│ │Others... ├────────┼────────────────────┘           │              │                              │
+│ └──────────┘        │                                ▼              │                              │
+│                     │                   ┌────────────────────────┐  │                              │
+│                     │                   │                        │  │                              │
+└─────────────────────┘ ┌───────────────┐ │                        │  │ ┌──────────────────┐         │
+ Datasources            │ system prompt │►│  ChatGPT processor     │◄─┼─┤User prompt input │         │
+                        └───────────────┘ │                        │  │ └──────────────────┘         │
+                                          └────────────┬───────────┘  │                              │
+                                                       │              │                              │
+                                                       │              │ ┌──────────────────────┐     │
+                                                       └──────────────┤►│Processed data output │     │
+                                                                      │ └──────────────────────┘     │
+                                                                      │                              │
+                                                                      └──────────────────────────────┘
+
 
 # Team Orange
 
