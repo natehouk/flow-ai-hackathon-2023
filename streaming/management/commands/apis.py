@@ -19,6 +19,7 @@ class CustomInstanceAPIs():
         self.current_pos = 0
         self.youtube_summarize_points = 4
         self.last_refresh_id = -1
+        self.video_interval = 30
 
 
     def add_data_to_model(self,):
@@ -51,8 +52,7 @@ class CustomInstanceAPIs():
             if len(headlines) != 0:
                 self.send_to_chat_gpt = True
         if self.source == "youtube":
-            text,pos,last_part = extract_audio("whisper/warren-buffet.wav","whisper/output.wav",self.youtube_summarize_points,self.current_pos)
-            print(text,pos)
+            text,pos,last_part = extract_audio("whisper/input-data-dl.wav","whisper/output.wav",self.video_interval,self.current_pos)
             self.current_pos = pos
             if text != False:
                 DataAPIs.objects.create(source="youtube",title="speech",description=f"text-{text}")
@@ -89,7 +89,7 @@ class CustomInstanceAPIs():
                 for inst_object in objects:
                     prompt += f"{inst_object.description} "
                 text = get_prompt(prompt)
-
+                print(text)
                 if text != False:
                     SummariesAPIs.objects.create(value=text,update=False)
                 self.chat_gpt_start_idx = self.chat_gpt_end_idx

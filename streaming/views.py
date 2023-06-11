@@ -8,6 +8,16 @@ from streaming.management.commands.apis import CustomInstanceAPIs
 
 transcribe_instance = Command()
 api_instance = CustomInstanceAPIs(None)
+import youtube_dl
+ydl_opts = {
+    'format': 'bestaudio/best',
+    'outtmpl': 'whisper/input-data-dl.mp3',
+    'postprocessors': [{
+        'key': 'FFmpegExtractAudio',
+        'preferredcodec': 'wav',
+        'preferredquality': '192',
+    }],
+}
 
 def get_data_apis(request):
     DataAPILength = DataAPIs.objects.count()
@@ -61,6 +71,12 @@ def add_source(request):
     source = request.POST.get("source")
     if source is None:
         pass
+    if source == "youtube":
+        url = request.POST.get("url")
+        
+        with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+            ydl.download([url])
+
     api_instance.source = source
     api_instance.status = False
     api_instance.send_to_chat_gpt = False

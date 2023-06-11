@@ -35,15 +35,15 @@ def extract_audio(input_path,output_file,nseconds,pos=0):
               "task": "transcribe", #default is transcribe. Other option is "translate"
             }
 
-            # response = requests.post(url, headers=headers, files=file, data=data)
-            import time
-            from datetime import datetime
+            response = requests.post(url, headers=headers, files=file, data=data)
+            # import time
+            # from datetime import datetime
             # print(response.json())
             if current_pos >= total_frames:
-                return f"text-{datetime.now()}",current_pos, True
-                # return response.json()["text"], current_pos, True    
-            # return response.json()["text"], current_pos, False
-            return f"text-{datetime.now()}",current_pos, False
+                # return f"text-{datetime.now()}",current_pos, True
+                return response.json()["text"], current_pos, True    
+            return response.json()["text"], current_pos, False
+            # return f"text-{datetime.now()}",current_pos, False
         else:
             # change later
             return False,pos, False

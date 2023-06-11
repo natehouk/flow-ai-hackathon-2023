@@ -41,10 +41,9 @@
                 }
             });
             }
+          setTimeout(pollSummary, 100);  // Poll every 5 seconds
         }
-        setTimeout(pollSummary, 100);  // Poll every 5 seconds
 
-      }
 
       $("#prompt").click(function() {
           var postData = {
@@ -69,7 +68,8 @@
             }
           });
 
-    });
+      });
+      
       pollData();
       pollSummary();
   });

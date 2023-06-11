@@ -16,9 +16,26 @@
       }
 
    var currentSource = null;
+
+   $('#dataSource').on('change', function() {
+    var source = $(this).val();
+    
+    if(source=="youtube"){
+      $("#youtube-url").prop('disabled', false);
+     }
+     else{
+      $("#youtube-url").prop('disabled', true);
+     }
+    
+    // Call a function or execute code here
+    // when the select option changes
+  });
+
    $("#source").click(function() {
         var source = $("#dataSource").val()
         var sourceText = $('#dataSource option:selected').text();
+        
+
         if(source=="none"){
          $("#sourceErr").text("     Please select one source     ")
         }
@@ -31,6 +48,17 @@
          var postData = {
             "source": source
           }; 
+          if(source=="youtube"){
+            var url = $("#youtube-url").val()
+            if (url == ""){
+               $("#sourceErr").text("     Please add youtube url     ")
+               return
+            }
+            else{
+               postData.url = url
+
+            }
+          }
          $("#transcript").prepend("<p style='color: red;'> Source Changed to:" +sourceText +"</p>")
 
           $.ajax({
