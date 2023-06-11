@@ -72,7 +72,7 @@ Made with ❤️ in Amsterdam by the following team:
 * Sarvesh Mehta
 * Nate Houk
 
-# Live Example
+# Live Demo
 
 Visit [http://yass.work/](http://yass.work/)
 
