@@ -8,7 +8,7 @@ from streaming.management.commands.apis import CustomInstanceAPIs
 
 transcribe_instance = Command()
 api_instance = CustomInstanceAPIs(None)
-import youtube_dl
+import yt_dlp as youtube_dl
 ydl_opts = {
     'format': 'bestaudio/best',
     'outtmpl': 'whisper/input-data-dl.mp3',
@@ -72,8 +72,7 @@ def add_source(request):
     if source is None:
         pass
     if source == "youtube":
-        url = request.POST.get("url")
-        
+        url = request.POST.get("url") 
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             ydl.download([url])
 

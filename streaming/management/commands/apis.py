@@ -52,7 +52,7 @@ class CustomInstanceAPIs():
             if len(headlines) != 0:
                 self.send_to_chat_gpt = True
         if self.source == "youtube":
-            text,pos,last_part = extract_audio("whisper/input-data-dl.wav","whisper/output.wav",self.video_interval,self.current_pos)
+            text,pos,last_part = extract_audio("whisper/input-data-dl.mp3.wav","whisper/output.wav",self.video_interval,self.current_pos)
             self.current_pos = pos
             if text != False:
                 DataAPIs.objects.create(source="youtube",title="speech",description=f"text-{text}")
