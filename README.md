@@ -31,7 +31,7 @@ Made with ❤️ in Amsterdam by the following team:
 
 # Live Example
 
-Visit [http://yass.work/](http://yass.work/)
+Coming soon!
 
 # How to Configure
 Create a file in the root directory called `.env` and replace `<openai-api-key>` with your [OpenAI API key](https://openai.com/blog/openai-api), [NewsAPI key](https://newsapi.org), [Whisper API Key](https://whisperapi.com), choose an OpenAI GPT model ("gpt-4", "gpt-3.5-turbo", etc) and set the system prompt:
