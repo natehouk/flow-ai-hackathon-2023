@@ -2,11 +2,11 @@
 
 ## YASS (Yet Another Streaming Summarizer)
 
-Introducing YASS, the ultimate data-summarizing marvel! ✨ Powered by ChatGPT, YASS transforms videos, audios, and news streams into concise insights. 🎥🎧📰 This cutting-edge tool goes beyond mere input flexibility, empowering users to customize summaries based on their unique requirements using prompts. 💪 Say goodbye to information overload and hello to streamlined knowledge extraction with YASS.
+Introducing YASS, the ultimate streaming data summarizer marvel! ✨ Powered by ChatGPT, YASS transforms videos, audios, and news streams into concise insights. 🎥🎧📰 This cutting-edge tool goes beyond mere input flexibility, empowering users to customize summaries based on their unique requirements using prompts. 💪 Say goodbye to information overload and hello to streamlined knowledge extraction with YASS.
 
-Whether you're seeking key takeaways from a video, unraveling audio mysteries, or staying up-to-date with news, YASS has you covered. 📺🔍📡 Its coolness lies in the seamless integration of diverse data sources, ensuring no information escapes your grasp. 🌐 With YASS, you're in control, shaping summaries to suit your needs.
+Whether you're seeking key takeaways from a video, unraveling audio mysteries, or staying up-to-date with news, YASS has you covered. 📺🔍📡 It's coolness lies in the seamless integration of diverse input data sources, ensuring no information escapes your grasp. 🌐 With YASS, you're in control, shaping summaries to suit your needs.
 
-Embrace the power of YASS, the future of data summarization. Stay ahead of the curve, save time, and make informed decisions effortlessly. ⏱️💡 Unlock the coolness factor today with YASS, your all-in-one streaming summarizer! 🚀🔓
+Embrace the power of YASS, the future of streaming data summarization. Stay ahead of the curve, save time, and make informed decisions effortlessly. ⏱️💡 Unlock the coolness factor today with YASS, your all-in-one streaming summarizer! 🚀🔓
 
 Possible inputs include:
 * Live Television News
@@ -24,7 +24,7 @@ The results are then added to a data frame which is appended to the system promp
 
 Output is concise, actionable bytes of information formatted in Markdown which streams to the browser.
 
-# Data Flow
+# Technical Diagram + Data Flow
 
 ```
 ┌─────────────────────┐
@@ -82,6 +82,7 @@ Create a file in the root directory called `.env` and replace `<openai-api-key>`
 NEWS_API_KEY="<news-api-key>"
 OPENAI_API_KEY="<openai-api-key>"
 WHISPER_API_KEY="<whisper-api-key>"
+MARKETAUX_API_KEY="<marketaux-api-key>"
 GPT_MODEL="gpt-4"
 SYSTEM_PROMPT="Follow these rules: 1) Your job is to summarize data inputs into bullet points. 2) Be concise. 3) Always show most important information as the top bullet point. 4) Emphasize important parts in bold using Markdown. 5) Companies, names and proper nouns should be in italic using Markdown. 6) Never write more than five bullet points. 7) The bullet points, bold and italic should be formatted using Markdown."
 ```
