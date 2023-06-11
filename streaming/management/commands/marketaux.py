@@ -11,6 +11,8 @@ def get_top_headlines_from_newsapi(params=""):
     for headline in articles["data"]:
         title = headline["title"]
         description = headline["description"].replace("\n"," ").replace("  "," ")
+        if description is None:
+            description = ""
         source = headline["source"]
         new_headlines.add(str({'title':title,"description":description,"source":source}))
     return new_headlines

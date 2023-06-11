@@ -20,7 +20,6 @@ def get_top_headlines_from_newsapi(params=""):
         description = news["description"]
         if description is None:
             description = ""
-        content = news["content"]
         # print(title,source,description,content)
         new_headlines.add(str({'title':title,"description":description,"source":source}))
     

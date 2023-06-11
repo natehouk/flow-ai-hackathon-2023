@@ -1,5 +1,6 @@
 from apscheduler.schedulers.background import BackgroundScheduler
-from streaming.management.commands.newsfeed import request_headlines
+import streaming.management.commands.newsfeed as newsfeed
+import streaming.management.commands.marketaux as narketaux
 from streaming.models import Data, Summaries, DataAPIs, SummariesAPIs
 from streaming.management.commands.chatgpt import get_prompt
 from streaming.management.commands.wav2text import extract_audio
@@ -22,7 +23,21 @@ class CustomInstanceAPIs():
 
     def add_data_to_model(self,):
         if self.source == "news":
-            headlines = request_headlines(set(self.previousheadlines))
+            headlines = newsfeed.request_headlines(set(self.previousheadlines))
+            print(headlines)
+            curr_length = len(self.previousheadlines)
+            for headline in headlines:
+                curr_headline = ast.literal_eval(headline)
+                if curr_length >= 1000:
+                    self.previousheadlines.pop(0)
+                curr_length += 1
+                self.previousheadlines.append(headline)
+                DataAPIs.objects.create(source=curr_headline["source"],description=curr_headline["description"],title=curr_headline["title"])
+                self.chat_gpt_end_idx += 1
+            if len(headlines) != 0:
+                self.send_to_chat_gpt = True
+        if self.source == "market":
+            headlines = narketaux.request_headlines(set(self.previousheadlines))
             print(headlines)
             curr_length = len(self.previousheadlines)
             for headline in headlines:
@@ -48,7 +63,7 @@ class CustomInstanceAPIs():
                     self.send_to_chat_gpt = True
 
     def chat_gpt_integration(self,):
-        if self.source == "news":
+        if self.source == "news" or self.source == "market":
             if DataAPIs.objects.last() and not DataAPIs.objects.last().update:
                 return 
             if self.send_to_chat_gpt:
