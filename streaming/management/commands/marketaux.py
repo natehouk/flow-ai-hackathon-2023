@@ -1,10 +1,11 @@
 import requests
 import json
+import os
 
 def get_top_headlines_from_newsapi(params=""):
     endpoint = "https://api.marketaux.com/v1/news/all"
     query_input = ""
-    api_token = "x4ZhlBIav8w8VhTLB3cDEo4CnyVRDQJiNwwVVIwq"
+    api_token = api_key = os.environ.get("MARKETAUX_API_KEY")
     query_params = "?entity_types=index,equity" + "&api_token="+ api_token 
     articles = json.loads(requests.get(endpoint+query_params).text)
     new_headlines = set()
