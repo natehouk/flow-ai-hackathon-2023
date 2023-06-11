@@ -76,7 +76,7 @@ Made with ❤️ in Amsterdam by the following team:
 
 Visit [http://yass.work/](http://yass.work/)
 
-**Example Videos**
+**Example Videos for YouTube URL Input Source**
 * [https://www.youtube.com/watch?v=UYrm0DZGhaQ](https://www.youtube.com/watch?v=UYrm0DZGhaQ)
 * [https://www.youtube.com/watch?v=01xYpDhYwGg](https://www.youtube.com/watch?v=01xYpDhYwGg)
 * [https://www.youtube.com/watch?v=9eTzV7HvKHU](https://www.youtube.com/watch?v=9eTzV7HvKHU)
