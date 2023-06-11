@@ -16,16 +16,6 @@
 
       function pollData() {
           var source = $("#dataSource").val()
-          if(source=="youtube"){
-            $.get('/latest-data/', function(data) {
-                var info = data.data;
-                if (info != false) {
-                    $("#transcript").prepend("<p>" + info + "</p>")
-                }
-                // $('#data').text(data.latest_data);
-                  // Poll every 5 seconds
-            });
-          }else{
             if(source=="none"){
             } else{
               $.get('/latest-data-api/', function(data) {
@@ -35,21 +25,12 @@
                 }
             });
             }
-          }
           setTimeout(pollData, 200);
       }
 
       function pollSummary() {
         var source = $("#dataSource").val()
-        if(source=="youtube"){
-          $.get('/latest-summary/', function(data) {
-              var info = data.data;
-              if (info != false) {
-                  $("#summary").prepend("<p>" + info + "</p>")
-              }
-              // $('#data').text(data.latest_data);
-          });
-        }else{
+
           if(source=="none"){
             } else{
               $.get('/latest-summary-api/', function(data) {

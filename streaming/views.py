@@ -8,36 +8,6 @@ from streaming.management.commands.apis import CustomInstanceAPIs
 
 transcribe_instance = Command()
 api_instance = CustomInstanceAPIs(None)
-def get_data(request):
-    data = Data.objects.last()
-    if data is None:
-        return JsonResponse({'data': False})
-    value = data.value
-    update = data.update
-    if not data.update:
-        latest_data_to_update = Data.objects.last()
-        latest_data_to_update.update = True
-        latest_data_to_update.save()
-    if not update:
-        return JsonResponse({'data': data.value})
-    else:
-        return JsonResponse({'data': False})
-
-
-def get_summary(request):
-    data = Summaries.objects.last()
-    if data is None:
-        return JsonResponse({'data': False})
-    value = data.value
-    update = data.update
-    if not data.update:
-        data_to_update = Summaries.objects.last()
-        data_to_update.update = True
-        data_to_update.save()
-    if not update:
-        return JsonResponse({'data': data.value})
-    else:
-        return JsonResponse({'data': False})
 
 def get_data_apis(request):
     DataAPILength = DataAPIs.objects.count()
@@ -82,11 +52,8 @@ def kill_source(request):
     source = request.POST.get("source")
     if source is None:
         pass
-    if source == "youtube":
-        transcribe_instance.status = True
-    else:
-        api_instance.source = None
-        api_instance.status = True
+    api_instance.source = None
+    api_instance.status = True
     
     return JsonResponse({'data': "killed"})
 
@@ -94,12 +61,12 @@ def add_source(request):
     source = request.POST.get("source")
     if source is None:
         pass
-    if source == "youtube":
-        transcribe_instance.status = False
-        transcribe_instance.run()
-    else:
-        api_instance.source = source
-        api_instance.run()
+    api_instance.source = source
+    api_instance.status = False
+    api_instance.send_to_chat_gpt = False
+    api_instance.current_pos = 0
+    api_instance.chat_gpt_start_idx = api_instance.chat_gpt_end_idx 
+    api_instance.run()
 
 
     return JsonResponse({'data': "added"})

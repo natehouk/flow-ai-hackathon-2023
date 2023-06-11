@@ -18,8 +18,8 @@ def get_prompt(prompt):
 	    ], 
 	)
 	result = chat_completion.choices[0].message.content
-	
-	# convert markdown to html
+
+	# # convert markdown to html
 	html = markdown.markdown(result)
 
 	return html

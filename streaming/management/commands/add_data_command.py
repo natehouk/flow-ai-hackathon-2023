@@ -9,7 +9,7 @@ from streaming.management.commands.chatgpt import get_prompt
 import math
 
 CURRENT_POS = 0
-REFRESH_INTERVAL = 15
+REFRESH_INTERVAL = 30
 SUMMARISE_INTERVAL = 60
 LAST_REFRESH_ID = -1
 
@@ -69,7 +69,6 @@ class Command(BaseCommand):
         self.scheduler2 = BackgroundScheduler()
         self.scheduler2.add_job(chat_gpt_integration,  'interval', seconds=2)  # Adjust the interval as needed
         self.scheduler2.start()
-        print("youtube started")
         try:
             # This is needed to keep the main thread alive
             # so the background scheduler can continue running
@@ -77,7 +76,6 @@ class Command(BaseCommand):
                 if self.status:
                     self.scheduler2.shutdown()
                     self.scheduler.shutdown()
-                    print("youtube stopped")
 
                     break
         except KeyboardInterrupt:

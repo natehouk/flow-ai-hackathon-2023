@@ -10,6 +10,7 @@ def extract_audio(input_path,output_file,nseconds,pos=0):
         total_length = total_frames / (frame_rate)
         num_frames = frame_rate * nseconds
     
+        print(total_frames,total_length)
         if pos < total_frames:
             wav_file.setpos(pos)
             current_pos = pos + (nseconds*frame_rate)
