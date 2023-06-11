@@ -30,4 +30,4 @@ class Prompts(models.Model):
 
 last_object = Prompts.objects.last()
 if last_object is None:
-    Prompts.objects.create(value=f"Which of the above might impact the financial market and relevant to a trading company?",update=False)
+    Prompts.objects.create(value=f"",update=False)
