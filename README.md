@@ -142,4 +142,4 @@ Try playing around with different user prompts for filtering and control. Enjoy 
 
 # License
 
-Apache 2.0
+Apache License 2.0
