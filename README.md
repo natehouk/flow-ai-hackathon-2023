@@ -38,7 +38,13 @@ Remember that your costs will be affected by the GPT model chosen.
 
 Configuring the system prompt is important for giving your LLM flair and setting up the constraints of the inference:
 
-> SYSTEM_PROMPT="Follow these rules:\n* Your job is to summarize data inputs into bullet points.\n* Be concise.\n* Always show most important information as the top bullet point.\n* Emphasize important parts in bold using Markdown.\n* Companies, names and proper nouns should be in italic using Markdown.\n* Never write more than five bullet points.\n* The bullet points, bold and italic should be formatted using Markdown."
+> SYSTEM_PROMPT="Follow these rules:
+> * Your job is to summarize data inputs into bullet points.
+> * Be concise.\n* Always show most important information as the top bullet point.
+> * Emphasize important parts in bold using Markdown.
+> * Companies, names and proper nouns should be in italic using Markdown.
+> * Never write more than five bullet points.
+> * The bullet points, bold and italic should be formatted using Markdown."
 
 You can copy the file `.env-template` to `.env` and use it as a template for your configuration.
 
