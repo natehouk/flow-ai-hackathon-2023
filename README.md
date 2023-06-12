@@ -77,7 +77,7 @@ Made with ❤️ in Amsterdam by the following team:
 Visit [http://yass.work/](http://yass.work/)
 
 **Example Videos for YouTube URL Input Source**
-* [https://www.youtube.com/watch?v=UYrm0DZGhaQ](https://www.youtube.com/watch?v=UYrm0DZGhaQ)
+* Warren Buffet on ChatGPT (2m 50s) ([https://www.youtube.com/watch?v=UYrm0DZGhaQ](https://www.youtube.com/watch?v=UYrm0DZGhaQ))
 * [https://www.youtube.com/watch?v=01xYpDhYwGg](https://www.youtube.com/watch?v=01xYpDhYwGg)
 * [https://www.youtube.com/watch?v=9eTzV7HvKHU](https://www.youtube.com/watch?v=9eTzV7HvKHU)
 * [https://www.youtube.com/watch?v=L4BqP8qM9yA](https://www.youtube.com/watch?v=L4BqP8qM9yA)
