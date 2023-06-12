@@ -81,7 +81,7 @@ Visit [http://yass.work/](http://yass.work/)
 * Lehman Brothers collapse: What went wrong ten  years ago? (11m 24s) ([https://www.youtube.com/watch?v=01xYpDhYwGg](https://www.youtube.com/watch?v=01xYpDhYwGg))
 * 9/11/01: The towers are hit (7m 17s) ([https://www.youtube.com/watch?v=9eTzV7HvKHU](https://www.youtube.com/watch?v=9eTzV7HvKHU))
 * Death of the Queen (59m 58s) ([https://www.youtube.com/watch?v=L4BqP8qM9yA](https://www.youtube.com/watch?v=L4BqP8qM9yA))
-* Sab Bankman-Fried Interviewed Live (1h 13m 57s) ([https://www.youtube.com/watch?v=IyoGdwVIwWw](https://www.youtube.com/watch?v=IyoGdwVIwWw))
+* Sam Bankman-Fried Interviewed Live (1h 13m 57s) ([https://www.youtube.com/watch?v=IyoGdwVIwWw](https://www.youtube.com/watch?v=IyoGdwVIwWw))
 * [로빈후드] 솔라나, 에이다, 폴리곤 결국 상장폐지... 그럼 다른 코인들은? (15m 15s) ([https://www.youtube.com/watch?v=02ut26-HFGg](https://www.youtube.com/watch?v=02ut26-HFGg))
 
 **Example User Prompts**
