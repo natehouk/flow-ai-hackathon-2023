@@ -74,7 +74,7 @@ Made with ❤️ in Amsterdam by the following team:
 
 # Live Demo
 
-Visit [http://yass.work/](http://yass.work/)
+👉 Visit [http://yass.work/](http://yass.work/)
 
 **Example Videos for YouTube URL Input Source**
 * Warren Buffet on ChatGPT (2m 50s) ([https://www.youtube.com/watch?v=UYrm0DZGhaQ](https://www.youtube.com/watch?v=UYrm0DZGhaQ))
@@ -138,7 +138,7 @@ $ python3 manage.py runserver
 
 # How to Use
 
-Visit [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+👉 Visit [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
 If you are running locally run the following command:
 
