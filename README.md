@@ -33,7 +33,7 @@ Made with ❤️ in Amsterdam by the following team:
 * [Sarvesh Mehta](https://github.com/sarvesh211999)
 * [Nate Houk](https://github.com/natehouk)
 
-You may contact us by emailing [team@yass.ai](mailto:team@yass.ai)
+📧 You may contact us by emailing [team@yass.ai](mailto:team@yass.ai)
 
 # Technical Diagram + Data Flow
 
