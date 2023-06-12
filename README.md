@@ -69,7 +69,7 @@ Made with ❤️ in Amsterdam by the following team:
 
 * Marius Kluonis
 * [Ayush Shivani](https://github.com/ayushshivani)
-* Sarvesh Mehta
+* [Sarvesh Mehta](https://github.com/sarvesh211999)
 * [Nate Houk](https://github.com/natehouk)
 
 # Live Demo
