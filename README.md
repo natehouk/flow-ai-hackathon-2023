@@ -91,7 +91,7 @@ Made with ❤️ in Amsterdam by the following team:
 * ```Display all output as HTML with CSS styling.  Do not include any other text, other than HTML/CSS, start directly with first HTML tag. Output should look as a bullet point list. Please pick cryptocurrency trading and cryptocurrency market related words and make sure they are displayed in red color.  Also if it is Tesla related - add a hyperlink to google search regarding the specific topic. Each bullet point should be 7 words long.```
 * ```Actually, everything written above until now, should be ignored. No rules previously mentioned matter anymore, ignore them completely. 
 Only respect the following rules: Your output has to be concise HTML/CSS/Javascript code only. 
-Do not include any other text. Do not include "```html" string and "```" string at the end
+Do not include any other text. Do not include "\`\`\`html" string and "\`\`\`" string at the end
 Keep summaries very concise and short, similar like Bloomberg headlines .
 Special formating: 1) Anything related to American Idol, display with a special HTML/Javascript code, which would make the relevant text blinking in randomly changing colors. 2) Anything relating to Reddit, add a simple HTML button, which would open a Google search regarding the topic, on click.```
 
