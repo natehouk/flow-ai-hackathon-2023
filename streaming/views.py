@@ -80,6 +80,7 @@ def add_source(request):
     api_instance.status = False
     api_instance.send_to_chat_gpt = False
     api_instance.current_pos = 0
+    api_instance.previousheadlines = []
     api_instance.chat_gpt_start_idx = api_instance.chat_gpt_end_idx 
     api_instance.run()
 

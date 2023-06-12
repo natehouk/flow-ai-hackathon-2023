@@ -31,7 +31,6 @@ def extract_audio(input_path,output_file,nseconds,pos=0):
             data = {
               "diarization": "false",
               "initialPrompt": "",
-              "language": "en", #if this isn't set, the model will auto detect language,
               "task": "transcribe", #default is transcribe. Other option is "translate"
             }
 
