@@ -127,8 +127,8 @@ $ mkdir -p /opt/src
 $ cd /opt/src
 $ git clone git@github.com:natehouk/flow-ai-hackathon-2023.git
 $ cd flow-ai-hackathon-2023
-$ pyenv install 3.8.16
-$ pyenv shell 3.8.16
+$ pyenv install 3.11.2
+$ pyenv shell 3.11.2
 $ pip install -r requirements.txt
 ```
 
