@@ -12,6 +12,7 @@
 
 # Working files
 output.wav
+input-data-dl.mp3.wav
 
 # Distribution / packaging
 .Python
