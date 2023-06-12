@@ -2,7 +2,7 @@
 
 ## YASS.ai (Yet Another Streaming Summarizer) 🤖
 
-Introducing YASS, the ultimate streaming data summarizer marvel! ✨ Powered by ChatGPT, YASS transforms videos, audios, and news streams into concise insights. 🎥🎧📰 This cutting-edge tool goes beyond mere input flexibility, empowering users to customize summaries based on their unique requirements using prompts. 💪 Say goodbye to information overload and hello to streamlined knowledge extraction with YASS.
+Introducing YASS.ai, the ultimate streaming data summarizer marvel! ✨ Powered by ChatGPT, YASS transforms videos, audios, and news streams into concise insights. 🎥🎧📰 This cutting-edge tool goes beyond mere input flexibility, empowering users to customize summaries based on their unique requirements using prompts. 💪 Say goodbye to information overload and hello to streamlined knowledge extraction with YASS.
 
 Whether you're seeking key takeaways from a video, unraveling audio mysteries, or staying up-to-date with news, YASS has you covered. 📺🔍📡 It's coolness lies in the seamless integration of diverse input data sources, ensuring no information escapes your grasp. 🌐 With YASS, you're in control, shaping summaries to suit your needs.
 
