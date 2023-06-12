@@ -24,6 +24,10 @@ The results are then added to a data frame which is appended to the system promp
 
 Output is concise, actionable bytes of information formatted in Markdown which streams to the browser.
 
+# Contact
+
+You may reach our team by emailing [team@yass.ai](mailto://team@yass.ai).
+
 # Technical Diagram + Data Flow
 
 ```
