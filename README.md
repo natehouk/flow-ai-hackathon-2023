@@ -78,17 +78,17 @@ Visit [http://yass.work/](http://yass.work/)
 
 **Example Videos for YouTube URL Input Source**
 * Warren Buffet on ChatGPT (2m 50s) ([https://www.youtube.com/watch?v=UYrm0DZGhaQ](https://www.youtube.com/watch?v=UYrm0DZGhaQ))
-* [https://www.youtube.com/watch?v=01xYpDhYwGg](https://www.youtube.com/watch?v=01xYpDhYwGg)
-* [https://www.youtube.com/watch?v=9eTzV7HvKHU](https://www.youtube.com/watch?v=9eTzV7HvKHU)
-* [https://www.youtube.com/watch?v=L4BqP8qM9yA](https://www.youtube.com/watch?v=L4BqP8qM9yA)
-* [https://www.youtube.com/watch?v=IyoGdwVIwWw](https://www.youtube.com/watch?v=IyoGdwVIwWw)
-* [https://www.youtube.com/watch?v=02ut26-HFGg](https://www.youtube.com/watch?v=02ut26-HFGg)
+* Lehman Brothers collapse: What went wrong ten  years ago? (11m 24s) ([https://www.youtube.com/watch?v=01xYpDhYwGg](https://www.youtube.com/watch?v=01xYpDhYwGg))
+* 9/11/01: The towers are hit (7m 17s) ([https://www.youtube.com/watch?v=9eTzV7HvKHU](https://www.youtube.com/watch?v=9eTzV7HvKHU))
+* Death of the Queen (59m 58s) ([https://www.youtube.com/watch?v=L4BqP8qM9yA](https://www.youtube.com/watch?v=L4BqP8qM9yA))
+* Sab Bankman-Fried Interviewed Live (1h 13m 57s) ([https://www.youtube.com/watch?v=IyoGdwVIwWw](https://www.youtube.com/watch?v=IyoGdwVIwWw))
+* [로빈후드] 솔라나, 에이다, 폴리곤 결국 상장폐지... 그럼 다른 코인들은? (15m 15s) ([https://www.youtube.com/watch?v=02ut26-HFGg](https://www.youtube.com/watch?v=02ut26-HFGg))
 
 **Example User Prompts**
-* Display all output as HTML with CSS styling.  Do not include any other text, other than HTML/CSS, start directly with first HTML tag. Output should look as a bullet point list. Please pick cryptocurrency trading and cryptocurrency market related words and make sure they are displayed in red color.  Also if it is Tesla related - add a hyperlink to google search regarding the specific topic. Each bullet point should be 7 words long.
-* The following prompt is by far most important. Ignore anything that was requested before this. Only listen to the following: Only display information about price predictions. I only care if price should go up or down. Any statement about price is important and nothing else.
-* Translate all data from non-English sources into the English language.
 * Ignore all advertisements and sponsorships embedded in the text.
+* Translate all data from non-English sources into the English language.
+* The following prompt is by far most important. Ignore anything that was requested before this. Only listen to the following: Only display information about price predictions. I only care if price should go up or down. Any statement about price is important and nothing else.
+* Display all output as HTML with CSS styling.  Do not include any other text, other than HTML/CSS, start directly with first HTML tag. Output should look as a bullet point list. Please pick cryptocurrency trading and cryptocurrency market related words and make sure they are displayed in red color.  Also if it is Tesla related - add a hyperlink to google search regarding the specific topic. Each bullet point should be 7 words long.
 
 # How to Configure
 Create a file in the root directory called `.env` and replace `<openai-api-key>` with your [OpenAI API key](https://openai.com/blog/openai-api), `<news-api-key>` with your [NewsAPI key](https://newsapi.org), `<whisper-api-key>` with your [Whisper API Key](https://whisperapi.com), `<marketaux-api-key>` with your [marketaux API key](https://marketaux.com), choose an OpenAI GPT model ("gpt-4", "gpt-3.5-turbo", etc) and set the system prompt:
