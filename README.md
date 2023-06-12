@@ -62,7 +62,7 @@ Made with ❤️ in Amsterdam by the following team:
 │                     │                   ┌────────────────────────┐  │                              │
 │                     │                   │                        │  │                              │
 └─────────────────────┘ ┌───────────────┐ │                        │  │ ┌──────────────────┐         │
- Datasources            │ System prompt │►│  ChatGPT processor     │◄─┼─┤User prompt input │         │
+ Data Sources           │ System prompt │►│  ChatGPT processor     │◄─┼─┤User prompt input │         │
                         └───────────────┘ │                        │  │ └──────────────────┘         │
                                           └────────────┬───────────┘  │                              │
                                                        │              │                              │
