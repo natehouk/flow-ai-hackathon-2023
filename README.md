@@ -141,18 +141,6 @@ $ python3 manage.py runserver
 
 👉 Visit [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
-If you are running locally run the following command:
-
-```
-$ python3 manage.py add_data_command
-```
-
-or if you are using Docker run the following command:
-
-```
-$ docker-compose exec yass python manage.py add_data_command
-```
-
 Try playing around with different user prompts for filtering and control. Enjoy your summaries.
 
 # License
