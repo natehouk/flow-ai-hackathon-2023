@@ -24,9 +24,16 @@ The results are then added to a data frame which is appended to the system promp
 
 Output is concise, actionable bytes of information formatted in Markdown which streams to the browser.
 
-# Contact
+# Team Orange
 
-You may reach our team by emailing [team@yass.ai](mailto://team@yass.ai)
+Made with ❤️ in Amsterdam by the following team:
+
+* Marius Kluonis
+* [Ayush Shivani](https://github.com/ayushshivani)
+* [Sarvesh Mehta](https://github.com/sarvesh211999)
+* [Nate Houk](https://github.com/natehouk)
+
+You may contact us by emailing [team@yass.ai](mailto://team@yass.ai)
 
 # Technical Diagram + Data Flow
 
@@ -66,15 +73,6 @@ You may reach our team by emailing [team@yass.ai](mailto://team@yass.ai)
                                                                       └──────────────────────────────┘
 
 ```
-
-# Team Orange
-
-Made with ❤️ in Amsterdam by the following team:
-
-* Marius Kluonis
-* [Ayush Shivani](https://github.com/ayushshivani)
-* [Sarvesh Mehta](https://github.com/sarvesh211999)
-* [Nate Houk](https://github.com/natehouk)
 
 # Live Demo
 
