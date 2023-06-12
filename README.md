@@ -74,7 +74,7 @@ Made with ❤️ in Amsterdam by the following team:
 
 # Live Demo
 
-👉 Visit [http://yass.work/](http://yass.work/)
+👉 Visit [http://yass.ai/](http://yass.ai/)
 
 **Example Videos for YouTube URL Input Source**
 * Warren Buffet on ChatGPT (2m 50s) ([https://www.youtube.com/watch?v=UYrm0DZGhaQ](https://www.youtube.com/watch?v=UYrm0DZGhaQ))
