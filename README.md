@@ -85,6 +85,7 @@ Made with ❤️ in Amsterdam by the following team:
 * Death of the Queen (59m 58s) ([https://www.youtube.com/watch?v=L4BqP8qM9yA](https://www.youtube.com/watch?v=L4BqP8qM9yA))
 * Sam Bankman-Fried Interviewed Live (1h 13m 57s) ([https://www.youtube.com/watch?v=IyoGdwVIwWw](https://www.youtube.com/watch?v=IyoGdwVIwWw))
 * [로빈후드] 솔라나, 에이다, 폴리곤 결국 상장폐지... 그럼 다른 코인들은? (15m 15s) ([https://www.youtube.com/watch?v=02ut26-HFGg](https://www.youtube.com/watch?v=02ut26-HFGg))
+* General Relativity Explained simply & visually (14m 3s) ([https://www.youtube.com/watch?v=tzQC3uYL67U](https://www.youtube.com/watch?v=tzQC3uYL67U))
 
 **Example User Prompts**
 * ```Ignore all advertisements and sponsorships embedded in the text.```
