@@ -139,7 +139,7 @@ $ python3 manage.py runserver
 
 # How to Use
 
-👉 Visit [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+👉 Visit [http://127.0.0.1:80/](http://127.0.0.1:80/) if using Docker or [http://127.0.0.1:8000/](http://127.0.0.1:8000/) if running locally.
 
 Try playing around with different user prompts for filtering and control. Enjoy your summaries.
 
