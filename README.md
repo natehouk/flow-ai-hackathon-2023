@@ -93,9 +93,7 @@ Made with ❤️ in Amsterdam by the following team:
 Only respect the following rules: Your output has to be concise HTML/CSS/Javascript code only. 
 Do not include any other text. Do not include "```html" string and "```" string at the end
 Keep summaries very concise and short, similar like Bloomberg headlines .
-Special formating:
-- Anything related to American Idol, display with a special HTML/Javascript code, which would make the relevant text blinking in randomly changing colors.
-- Anything relating to Reddit, add a simple HTML button, which would open a Google search regarding the topic, on click. 
+Special formating: 1) Anything related to American Idol, display with a special HTML/Javascript code, which would make the relevant text blinking in randomly changing colors. 2) Anything relating to Reddit, add a simple HTML button, which would open a Google search regarding the topic, on click. 
 
 # How to Configure
 Create a file in the root directory called `.env` and replace `<openai-api-key>` with your [OpenAI API key](https://openai.com/blog/openai-api), `<news-api-key>` with your [NewsAPI key](https://newsapi.org), `<whisper-api-key>` with your [Whisper API Key](https://whisperapi.com), `<marketaux-api-key>` with your [marketaux API key](https://marketaux.com), choose an OpenAI GPT model ("gpt-4", "gpt-3.5-turbo", etc) and set the system prompt:
