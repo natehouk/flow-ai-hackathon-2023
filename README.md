@@ -1,6 +1,6 @@
 # flow-ai-hackathon-2023
 
-## YASS (Yet Another Streaming Summarizer)🤖
+## YASS (Yet Another Streaming Summarizer) 🤖
 
 Introducing YASS, the ultimate streaming data summarizer marvel! ✨ Powered by ChatGPT, YASS transforms videos, audios, and news streams into concise insights. 🎥🎧📰 This cutting-edge tool goes beyond mere input flexibility, empowering users to customize summaries based on their unique requirements using prompts. 💪 Say goodbye to information overload and hello to streamlined knowledge extraction with YASS.
 
