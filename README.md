@@ -30,11 +30,11 @@ Output is concise, actionable bytes of information formatted in Markdown which s
 ┌─────────────────────┐
 │                     │
 │ ┌─────────────┐     │  ┌────────────┐      ┌────────────────────────────────┐
-│ │Youtube URL  ├─────┼──┤audio strip ├─────►│                                │
+│ │YouTube URL  ├─────┼──┤Audio strip ├─────►│                                │
 │ └─────────────┘     │  └────────────┘      │                                │
-│                     │                      │ extract text with Whisperer API│
+│                     │                      │ Extract text with Whisperer API│
 │ ┌─────────────────┐ │                      │                                │
-│ │Audio files .wav ├─┼─────────────────────►│                                │
+│ │Audio Files .wav ├─┼─────────────────────►│                                │
 │ └─────────────────┘ │                      └──────────────┬─────────────────┘
 │                     │                                     │
 │ ┌─────────┐         │                                     ▼                       Website GUI
@@ -51,7 +51,7 @@ Output is concise, actionable bytes of information formatted in Markdown which s
 │                     │                   ┌────────────────────────┐  │                              │
 │                     │                   │                        │  │                              │
 └─────────────────────┘ ┌───────────────┐ │                        │  │ ┌──────────────────┐         │
- Datasources            │ system prompt │►│  ChatGPT processor     │◄─┼─┤User prompt input │         │
+ Datasources            │ System prompt │►│  ChatGPT processor     │◄─┼─┤User prompt input │         │
                         └───────────────┘ │                        │  │ └──────────────────┘         │
                                           └────────────┬───────────┘  │                              │
                                                        │              │                              │
