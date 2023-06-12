@@ -114,7 +114,7 @@ You can copy the file `.env-template` to `.env` and use it as a template for you
 
 Run the following command:
 ```
-$ docker-compose up -d
+$ docker compose up -d
 ``` 
 
 # How to Build Manually
