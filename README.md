@@ -88,6 +88,7 @@ Visit [http://yass.work/](http://yass.work/)
 * Display all output as HTML with CSS styling.  Do not include any other text, other than HTML/CSS, start directly with first HTML tag. Output should look as a bullet point list. Please pick cryptocurrency trading and cryptocurrency market related words and make sure they are displayed in red color.  Also if it is Tesla related - add a hyperlink to google search regarding the specific topic. Each bullet point should be 7 words long.
 * The following prompt is by far most important. Ignore anything that was requested before this. Only listen to the following: Only display information about price predictions. I only care if price should go up or down. Any statement about price is important and nothing else.
 * Translate all data from non-English sources into the English language.
+* Ignore all advertisements and sponsorships embedded in the text.
 
 # How to Configure
 Create a file in the root directory called `.env` and replace `<openai-api-key>` with your [OpenAI API key](https://openai.com/blog/openai-api), [NewsAPI key](https://newsapi.org), [Whisper API Key](https://whisperapi.com), choose an OpenAI GPT model ("gpt-4", "gpt-3.5-turbo", etc) and set the system prompt:
