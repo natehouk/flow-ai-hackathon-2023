@@ -68,9 +68,9 @@ Output is concise, actionable bytes of information formatted in Markdown which s
 Made with ❤️ in Amsterdam by the following team:
 
 * Marius Kluonis
-* @ayushshivani
+* [Ayush Shivani](https://github.com/ayushshivani)
 * Sarvesh Mehta
-* @natehouk
+* [Nate Houk](https://github.com/natehouk)
 
 # Live Demo
 
