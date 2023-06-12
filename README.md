@@ -91,7 +91,7 @@ Visit [http://yass.work/](http://yass.work/)
 * Ignore all advertisements and sponsorships embedded in the text.
 
 # How to Configure
-Create a file in the root directory called `.env` and replace `<openai-api-key>` with your [OpenAI API key](https://openai.com/blog/openai-api), [NewsAPI key](https://newsapi.org), [Whisper API Key](https://whisperapi.com), [marketaux API key](https://marketaux.com), choose an OpenAI GPT model ("gpt-4", "gpt-3.5-turbo", etc) and set the system prompt:
+Create a file in the root directory called `.env` and replace `<openai-api-key>` with your [OpenAI API key](https://openai.com/blog/openai-api), '<news-api-key>' with your [NewsAPI key](https://newsapi.org), '<whisper-api-key>' with your [Whisper API Key](https://whisperapi.com), '<marketaux-api-key>' with your [marketaux API key](https://marketaux.com), choose an OpenAI GPT model ("gpt-4", "gpt-3.5-turbo", etc) and set the system prompt:
 ```
 NEWS_API_KEY="<news-api-key>"
 OPENAI_API_KEY="<openai-api-key>"
