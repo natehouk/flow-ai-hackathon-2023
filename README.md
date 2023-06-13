@@ -86,6 +86,7 @@ Made with ❤️ in Amsterdam by the following team:
 * Sam Bankman-Fried Interviewed Live (1h 13m 57s) ([https://www.youtube.com/watch?v=IyoGdwVIwWw](https://www.youtube.com/watch?v=IyoGdwVIwWw))
 * [로빈후드] 솔라나, 에이다, 폴리곤 결국 상장폐지... 그럼 다른 코인들은? (15m 15s) ([https://www.youtube.com/watch?v=02ut26-HFGg](https://www.youtube.com/watch?v=02ut26-HFGg))
 * General Relativity Explained simply & visually (14m 3s) ([https://www.youtube.com/watch?v=tzQC3uYL67U](https://www.youtube.com/watch?v=tzQC3uYL67U))
+* WebEx Meeting (30m 10s) ([https://www.youtube.com/watch?v=-nqm-ik9SDU](https://www.youtube.com/watch?v=-nqm-ik9SDU))
 
 **Example User Prompts**
 * ```Ignore all advertisements and sponsorships embedded in the text.```
