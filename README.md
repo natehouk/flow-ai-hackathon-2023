@@ -131,6 +131,7 @@ $ cd flow-ai-hackathon-2023
 $ pyenv install 3.11.2
 $ pyenv shell 3.11.2
 $ pip install -r requirements.txt
+$ source .env
 ```
 
 # How to Run Locally
