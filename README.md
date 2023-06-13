@@ -38,7 +38,7 @@ Made with ❤️ in Amsterdam by the following team:
 
 # Presentation + Screen Recording
 
-[![Presentation + Screen Recording](https://img.youtube.com/vi/7OPi8J5nak/0.jpg)](https://www.youtube.com/watch?v=7OPi8J5nak)
+[![Presentation + Screen Recording](https://img.youtube.com/vi/-7OPi8J5nak/0.jpg)](https://www.youtube.com/watch?v=-7OPi8J5nak "Team Orange + YASS.ai - Flow AI Hackathon 2023")
 
 # Technical Diagram + Data Flow
 
