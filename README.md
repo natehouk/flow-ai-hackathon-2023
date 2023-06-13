@@ -36,6 +36,10 @@ Made with ❤️ in Amsterdam by the following team:
 
 📧 You may contact us by emailing [team@yass.ai](mailto:team@yass.ai)
 
+# Presentation + Screen Recording
+
+https://www.youtube.com/watch?v=-7OPi8J5nak
+
 # Technical Diagram + Data Flow
 
 ```
