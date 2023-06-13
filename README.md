@@ -11,8 +11,9 @@ Embrace the power of YASS, the future of streaming data summarization. Stay ahea
 Possible inputs include:
 * Live Television News
 * Live Radio News
-* Live WebEx Meeting
-* WebEx Meeting
+* Live WebEx Video Meeting
+* Live WebEx Text Chats
+* Pre-recorded WebEx Meeting
 * YouTube Video
 * News Articles
 * Market Data
