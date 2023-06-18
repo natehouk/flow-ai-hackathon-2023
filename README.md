@@ -29,7 +29,7 @@ Output is concise, actionable bytes of information formatted in Markdown which s
 
 Made with ❤️ in Amsterdam by the following team:
 
-* Marius Kluonis
+* [Marius Kluonis](https://github.com/bendermist)
 * [Ayush Shivani](https://github.com/ayushshivani)
 * [Sarvesh Mehta](https://github.com/sarvesh211999)
 * [Nate Houk](https://github.com/natehouk)
